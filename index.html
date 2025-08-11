@@ -315,9 +315,37 @@
         }
 
         .section {
-            padding: 100px 0;
-            position: relative;
+padding: 40px 0; /* Reduced from 100px 0 */            position: relative;
         }
+        @media (max-width: 768px) {
+    .section {
+        padding: 25px 0; /* Reduced from 50px 0 */
+    }
+}
+
+@media (max-width: 600px) {
+    .section {
+        padding: 20px 0; /* Reduced from 40px 0 */
+    }
+}
+
+@media (max-width: 480px) {
+    .section {
+        padding: 15px 0; /* Reduced from 25px 0 */
+    }
+}
+
+@media (max-width: 360px) {
+    .section {
+        padding: 10px 0; /* Reduced from 25px 0 */
+    }
+}
+
+@media (max-width: 320px) {
+    .section {
+        padding: 8px 0; /* Reduced from 25px 0 */
+    }
+}
 
         /* Alternating section backgrounds */
         .section-bg-1a1a1a {
@@ -2519,37 +2547,41 @@
                         Learn professional makeup at UK International with hands-on training and global certification.
                     </p>
                 </div>
-                <div class="hero-form-container">
-                    <div class="hero-contact-form fade-in fade-in-delay-1 card-3d morph-3d">
-                        <h3 class="form-title">Get Started Today!</h3>
-                        <form>
-                            <div class="form-group">
-                                <input type="text" class="form-input" placeholder="Your Name" required
-                                    aria-label="Your Name">
-                            </div>
-                            <div class="form-group">
-                                <input type="email" class="form-input" placeholder="Your Email" required
-                                    aria-label="Your Email">
-                            </div>
-                            <div class="form-group">
-                                <input type="tel" class="form-input" placeholder="Your Phone Number" required
-                                    aria-label="Your Phone Number">
-                            </div>
-                            <div class="form-group">
-                                <input type="text" class="form-input" placeholder="Course Name" required
-                                    aria-label="Course Name">
-                            </div>
-                            <div class="form-group">
-                                <textarea class="form-input" rows="4" placeholder="Your Message" required
-                                    aria-label="Your Message"></textarea>
-                            </div>
-                            <button type="submit" class="btn btn-primary btn-3d btn-enhanced btn-pulse"
-                                style="width: 100%;" aria-label="Enroll Now">
-                                Enroll Now – Transform Your Passion into Profession!
-                            </button>
-                        </form>
-                    </div>
-                </div>
+               <div class="hero-form-container">
+    <div class="hero-contact-form fade-in fade-in-delay-1 card-3d morph-3d" 
+         style="padding:20px;border-radius:12px;background:linear-gradient(145deg,#1a1a1a,#0e0e0e);box-shadow:0 8px 25px rgba(0,0,0,0.3);">
+        <h3 class="form-title" style="font-size:1.4rem;margin-bottom:15px;color:#ff4fd8;text-align:center;">
+            Get Started Today!
+        </h3>
+        <form>
+            <div class="form-group" style="margin-bottom:12px;">
+                <input type="text" placeholder="Your Name" required aria-label="Your Name"
+                       style="padding:10px 14px;font-size:0.95rem;width:100%;border-radius:8px;border:1px solid #444;background:#121212;color:#fff;transition:0.3s;">
+            </div>
+            <div class="form-group" style="margin-bottom:12px;">
+                <input type="email" placeholder="Your Email" required aria-label="Your Email"
+                       style="padding:10px 14px;font-size:0.95rem;width:100%;border-radius:8px;border:1px solid #444;background:#121212;color:#fff;transition:0.3s;">
+            </div>
+            <div class="form-group" style="margin-bottom:12px;">
+                <input type="tel" placeholder="Your Phone Number" required aria-label="Your Phone Number"
+                       style="padding:10px 14px;font-size:0.95rem;width:100%;border-radius:8px;border:1px solid #444;background:#121212;color:#fff;transition:0.3s;">
+            </div>
+            <div class="form-group" style="margin-bottom:12px;">
+                <input type="text" placeholder="Course Name" required aria-label="Course Name"
+                       style="padding:10px 14px;font-size:0.95rem;width:100%;border-radius:8px;border:1px solid #444;background:#121212;color:#fff;transition:0.3s;">
+            </div>
+            <div class="form-group" style="margin-bottom:12px;">
+                <textarea rows="4" placeholder="Your Message" required aria-label="Your Message"
+                          style="padding:10px 14px;font-size:0.95rem;width:100%;border-radius:8px;border:1px solid #444;background:#121212;color:#fff;min-height:80px;transition:0.3s;"></textarea>
+            </div>
+            <button type="submit" aria-label="Enroll Now"
+                    style="width:100%;padding:12px 20px;border:none;border-radius:50px;background:linear-gradient(90deg,#ff4fd8,#ff92f4);color:#fff;font-size:1rem;font-weight:600;cursor:pointer;box-shadow:0 4px 15px rgba(255,79,216,0.4);transition:all 0.3s ease;">
+                Enroll Now – Transform Your Passion into Profession!
+            </button>
+        </form>
+    </div>
+</div>
+
             </div>
         </div>
     </section>
@@ -2614,7 +2646,7 @@
                 }
             </style>
 
-            <div class="course-image">
+           <div class="course-image">
                 <img src="about2.jpg" alt="Makeup Model 1">
                 <img src="about1.avif" alt="Makeup Model 2">
                 <img src="about3.jpg" alt="Makeup Model 3">
@@ -2695,46 +2727,60 @@
 
 
     <!-- Section 5: Who Is This Course For -->
-    <section class="who-for-section section-bg-1a1a1a">
-        <div class="container">
-            <h2 class="section-title fade-in">🎯 Who Is This Course For?</h2>
-            <div class="who-for-grid fade-in fade-in-delay-1">
-                <div class="who-card">
-                    <div class="icon-circle">
-                        <i class="fas fa-seedling"></i>
-                    </div>
-                    <h3>Beginners</h3>
-                    <p>No or basic makeup knowledge? This course is your perfect start.</p>
+<section 
+    class="who-for-section section-bg-1a1a1a" 
+    style="
+        background-image: url('banio8.jpg');
+        background-size: cover; 
+        background-position: center; 
+        background-repeat: no-repeat;
+padding: 40px 0; /* Reduced from 100px 0 */        color: #fff; 
+        text-align: center;
+    "
+>     
+    <div class="container">
+        <h2 class="section-title fade-in" style="font-size: 2.8rem; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 40px; color: #f806d9; text-shadow: 2px 2px 6px rgba(3,3,3,0.6);">
+            🎯 Who Is This Course For?
+        </h2>
+        <div class="who-for-grid fade-in fade-in-delay-1" style="display: flex; gap: 25px; flex-wrap: wrap; justify-content: center;">
+            <div class="who-card" style="background: linear-gradient(145deg, #030303, #1a1a1a); color: #f806d9; border-radius: 50% 50% 0 0; padding: 25px; width: 240px; text-align: center; box-shadow: 0 8px 20px rgba(3,3,3,0.5); transition: transform 0.3s ease, box-shadow 0.3s ease; transform: perspective(500px) translateZ(0);">
+                <div class="icon-circle" style="font-size: 48px; margin-bottom: 15px; color: #f806d9; text-shadow: 0 0 10px rgba(248,6,217,0.6);">
+                    <i class="fas fa-seedling"></i>
                 </div>
-                <div class="who-card">
-                    <div class="icon-circle">
-                        <i class="fas fa-home"></i>
-                    </div>
-                    <h3>Students & Homemakers</h3>
-                    <p>Turn your creativity into a professional career.</p>
-                </div>
-                <div class="who-card">
-                    <div class="icon-circle">
-                        <i class="fas fa-user-tie"></i>
-                    </div>
-                    <h3>Freelancers</h3>
-                    <p>Upgrade your skills and attract more clients.</p>
-                </div>
-                <div class="who-card">
-                    <div class="icon-circle">
-                        <i class="fas fa-cut"></i>
-                    </div>
-                    <h3>Salon Professionals</h3>
-                    <p>Offer premium makeup services & grow your business.</p>
-                </div>
+                <h3 style="font-size: 1.5rem; font-weight: 600; margin-bottom: 10px; color: #f806d9;">Beginners</h3>
+                <p style="font-size: 1rem; line-height: 1.5; color: white;">No or basic makeup knowledge? This course is your perfect start.</p>
             </div>
-            <div style="text-align: center; margin-top: 1.8rem;">
-                <a href="#contact" class="btn btn-primary fade-in fade-in-delay-3 btn-3d btn-enhanced btn-pulse"
-                    aria-label="Know Now">Know More</a>
+            <div class="who-card" style="background: linear-gradient(145deg, #030303, #1a1a1a); color: #f806d9; border-radius: 50% 50% 0 0; padding: 25px; width: 240px; text-align: center; box-shadow: 0 8px 20px rgba(3,3,3,0.5); transition: transform 0.3s ease, box-shadow 0.3s ease; transform: perspective(500px) translateZ(0);">
+                <div class="icon-circle" style="font-size: 48px; margin-bottom: 15px; color: #f806d9; text-shadow: 0 0 10px rgba(248,6,217,0.6);">
+                    <i class="fas fa-user-graduate"></i>
+                </div>
+                <h3 style="font-size: 1.5rem; font-weight: 600; margin-bottom: 10px; color: #f806d9;">Students</h3>
+                <p style="font-size: 1rem; line-height: 1.5; color: white;">Turn your creativity into a professional career.</p>
+            </div>
+            <div class="who-card" style="background: linear-gradient(145deg, #030303, #1a1a1a); color: #f806d9; border-radius: 50% 50% 0 0; padding: 25px; width: 240px; text-align: center; box-shadow: 0 8px 20px rgba(3,3,3,0.5); transition: transform 0.3s ease, box-shadow 0.3s ease; transform: perspective(500px) translateZ(0);">
+                <div class="icon-circle" style="font-size: 48px; margin-bottom: 15px; color: #f806d9; text-shadow: 0 0 10px rgba(248,6,217,0.6);">
+                    <i class="fas fa-user-tie"></i>
+                </div>
+                <h3 style="font-size: 1.5rem; font-weight: 600; margin-bottom: 10px; color: #f806d9;">Freelancers</h3>
+                <p style="font-size: 1rem; line-height: 1.5; color: white;">Upgrade your skills and attract more clients.</p>
+            </div>
+            <div class="who-card" style="background: linear-gradient(145deg, #030303, #1a1a1a); color: #f806d9; border-radius: 50% 50% 0 0; padding: 25px; width: 240px; text-align: center; box-shadow: 0 8px 20px rgba(3,3,3,0.5); transition: transform 0.3s ease, box-shadow 0.3s ease; transform: perspective(500px) translateZ(0);">
+                <div class="icon-circle" style="font-size: 48px; margin-bottom: 15px; color: #f806d9; text-shadow: 0 0 10px rgba(248,6,217,0.6);">
+                    <i class="fas fa-cut"></i>
+                </div>
+                <h3 style="font-size: 1.5rem; font-weight: 600; margin-bottom: 10px; color: #f806d9;">Professionals</h3>
+                <p style="font-size: 1rem; line-height: 1.5; color: white;">Offer premium makeup services & grow your business.</p>
             </div>
         </div>
-    </section>
-
+        <div style="text-align: center; margin-top: 2.5rem;">
+            <a href="#contact" class="btn btn-primary fade-in fade-in-delay-3 btn-3d btn-enhanced btn-pulse" 
+               style="background:#f806d9;; padding: 15px 40px; font-size: 1.2rem; font-weight: 600; text-transform: uppercase; border-radius: 50px; box-shadow: 0 6px 15px rgba(248,6,217,0.5); transition: transform 0.3s ease, box-shadow 0.3s ease; text-decoration: none; color: #030303;"
+               onmouseover="this.style.transform='translateY(-3px)'; this.style.boxShadow='0 8px 20px rgba(248,6,217,0.7);'" 
+               onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 6px 15px rgba(248,6,217,0.5);'"
+               aria-label="Know Now">Know More</a>
+        </div>
+    </div>
+</section>
     <!-- Section 6: What You'll Learn -->
     <section class="section gradient-bg section-bg-030303">
         <div class="container">
@@ -2745,7 +2791,7 @@
                     <!-- Card 1 -->
                     <div class="learn-card fade-up">
                         <div class="learn-image">
-                            <img src="ma.avif" alt="Makeup Basics">
+                            <img src="bani2.jpeg" alt="Makeup Basics">
                         </div>
                         <div class="learn-content">
                             <ul class="feature-list">
@@ -2760,7 +2806,7 @@
                     <!-- Card 2 -->
                     <div class="learn-card fade-up">
                         <div class="learn-image">
-                            <img src="bridal.jpeg" alt="Bridal Makeup">
+                            <img src="bani6.jpeg" alt="Bridal Makeup">
                         </div>
                         <div class="learn-content">
                             <ul class="feature-list">
@@ -2813,12 +2859,19 @@
             box-shadow: 0 12px 35px rgba(248, 6, 217, 0.5);
         }
 
-        .learn-image img {
-            width: 100%;
-            height: 230px;
-            object-fit: cover;
-            display: block;
-        }
+.learn-image {
+    width: 100%;
+    overflow: hidden;
+}
+
+.learn-image img {
+    width: 100%;     /* take full width of the box */
+    height: 450px;    /* keep aspect ratio */
+    display: block;  /* remove default inline gaps */
+}
+
+
+
 
         .learn-content {
             padding: 1.2rem;
@@ -2968,7 +3021,16 @@
     </style>
 
 
-    <section class="section gradient-bg section-bg-1a1a1a">
+    <section class="section gradient-bg section-bg-1a1a1a"  style="
+        background-image: url('banner2.jpg');
+        background-size: cover; 
+        background-position: center; 
+        background-repeat: no-repeat;
+        padding: 40px 0;
+        color: #fff; 
+        text-align: center;
+    "
+>   
         <div class="container">
             <div class="section-content">
                 <h2 class="section-title">PLACEMENT PARTNERS</h2>
@@ -3091,24 +3153,135 @@
 
 
     <!-- Section 8: Certification -->
-    <section class="section gradient-bg section-bg-030303">
-        <div class="container">
-            <div class="section-content">
-                <h2 class="section-title fade-in">Certification & Career Support</h2>
-                <div class="card fade-in fade-in-delay-1 card-3d morph-3d">
-                    <p style="color: rgba(255, 255, 255, 0.9); line-height: 1.7; text-align: center; font-size: 1rem;">
-                        Every student gets a UK International Beauty Academy Certificate, valid across India.
-                        We also offer portfolio creation, interview preparation, and direct job assistance after
-                        completion.
-                    </p>
-                </div>
-                <div style="text-align: center; margin-top: 1.8rem;">
-                    <a href="#contact" class="btn btn-primary fade-in fade-in-delay-2 btn-3d btn-enhanced btn-pulse"
-                        aria-label="Inquire Now">Inquire Now</a>
-                </div>
+   <section class="cert-career-section">
+    <div class="container">
+        <div class="section-header">
+            <h2>🎓 Certification & Career Support</h2>
+        </div>
+        <div class="content-wrapper">
+            <!-- Left Content -->
+            <div class="text-content">
+                <p>
+                    Earn an <strong>industry-recognized certificate</strong> that boosts your resume and credibility.
+                    Get complete career assistance — <strong>resume building</strong>, <strong>interview prep</strong>, 
+                    <strong>LinkedIn optimization</strong>, job alerts, and placement support to help you land your dream role.
+                </p>
+            </div>
+
+            <!-- Right Image -->
+            <div class="image-content">
+                <img src="certificate.jpeg" alt="Career Support Certificate">
             </div>
         </div>
-    </section>
+
+        <!-- Button -->
+        <div class="btn-container">
+            <a href="#contact" class="btn-inquire">Inquire Now</a>
+        </div>
+    </div>
+</section>
+
+<style>
+.cert-career-section {
+    background: #030303;
+    padding: 60px 20px;
+    color: #fff;
+    font-family: 'Poppins', sans-serif;
+}
+
+.section-header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.section-header h2 {
+    font-size: 2rem;
+    font-weight: 700;
+    background: linear-gradient(90deg, #ff4fd8, #ff92f4);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: fadeInDown 1s ease forwards;
+}
+
+.content-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 40px;
+    max-width: 1100px;
+    margin: auto;
+}
+
+.text-content {
+    flex: 1;
+    min-width: 300px;
+    font-size: 1.1rem;
+    line-height: 1.8;
+    animation: fadeInLeft 1.2s ease forwards;
+}
+
+.text-content strong {
+    color: #ff4fd8;
+}
+
+.image-content {
+    flex: 1;
+    min-width: 300px;
+    text-align: center;
+    animation: fadeInRight 1.2s ease forwards;
+}
+
+.image-content img {
+    max-width: 100%;
+    border-radius: 12px;
+    box-shadow: 0 6px 30px rgba(255, 79, 216, 0.4);
+    transition: transform 0.4s ease;
+}
+
+.image-content img:hover {
+    transform: scale(1.05);
+}
+
+.btn-container {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.btn-inquire {
+    display: inline-block;
+    background: linear-gradient(90deg, #ff4fd8, #ff92f4);
+    color: #fff;
+    padding: 14px 32px;
+    border-radius: 50px;
+    font-size: 1rem;
+    font-weight: 600;
+    text-decoration: none;
+    box-shadow: 0 4px 15px rgba(255, 79, 216, 0.4);
+    transition: all 0.3s ease;
+}
+
+.btn-inquire:hover {
+    background: linear-gradient(90deg, #ff92f4, #ff4fd8);
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(255, 79, 216, 0.6);
+}
+
+/* Animations */
+@keyframes fadeInLeft {
+    from { opacity: 0; transform: translateX(-50px); }
+    to { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes fadeInRight {
+    from { opacity: 0; transform: translateX(50px); }
+    to { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes fadeInDown {
+    from { opacity: 0; transform: translateY(-30px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+</style>
 
     <!-- Section 9: Testimonials -->
     <section class="section gradient-bg section-bg-1a1a1a">
@@ -3170,7 +3343,21 @@
     </style>
 
     <!-- Section 10: Contact Form -->
-    <section class="section gradient-bg section-bg-030303" id="contact">
+    <section class="section gradient-bg section-bg-030303" id="contact"  
+    style="
+        background-image: url('banio8.jpg');
+        background-size: cover; 
+        background-position: center; 
+        background-repeat: no-repeat;
+        background-color: rgba(255,255,255,0.25); /* light overlay */
+        background-blend-mode: lighten; /* blends overlay with image */
+        padding: 60px 20px; 
+        color: #fff; 
+        text-align: center;
+    "
+>
+    <!-- your content here -->
+
         <div class="container">
             <div class="section-content">
                 <h2 class="section-title fade-in">Contact Us</h2>
@@ -3206,7 +3393,7 @@
     <!-- Put this near the end of your <body> -->
     <footer class="site-footer">
         <div class="footer-inner">
-            <small>© Copyright 2024. All Rights Reserved by UK International London Beauty School.</small>
+            <small>© Copyright 2025. All Rights Reserved by UK International London Beauty School.</small>
         </div>
     </footer>
 
