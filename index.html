@@ -39,7 +39,7 @@
         }
 
         .achievements-section {
-            padding: 60px 20px;
+        padding: 20px 0;
             text-align: center;
             background: black;
             color: white;
@@ -315,7 +315,8 @@
         }
 
         .section {
-padding: 40px 0; /* Reduced from 100px 0 */            position: relative;
+padding: 40px 0; /* Reduced from 100px 0 */      
+      position: relative;
         }
         @media (max-width: 768px) {
     .section {
@@ -878,7 +879,7 @@ padding: 40px 0; /* Reduced from 100px 0 */            position: relative;
 
         /* Career Section */
         .career-section {
-            padding: 100px 16px;
+            padding: 40px 0px;
             background: none;
             position: relative;
         }
@@ -986,7 +987,7 @@ padding: 40px 0; /* Reduced from 100px 0 */            position: relative;
             display: flex;
             align-items: center;
             justify-content: center;
-            padding: 100px 16px;
+            padding: 40px 0px;
             background: #1a1a1a;
         }
 
@@ -1076,7 +1077,7 @@ padding: 40px 0; /* Reduced from 100px 0 */            position: relative;
         /* Achievements Section */
         .achievements-section {
             position: relative;
-            padding: 100px 16px;
+        padding: 50px 0;
             background: none;
         }
 
@@ -2535,56 +2536,99 @@ padding: 40px 0; /* Reduced from 100px 0 */            position: relative;
         </div>
     </header>
 
-    <!-- Section 1: Hero Banner -->
-    <section class="section hero gradient-bg section-bg-1a1a1a">
-        <div class="container">
-            <div class="hero-content" style="padding-top: 60px;">
-                <div class="hero-text">
-                    <h2 class="hero-title fade-in float-3d">Master the Art of Professional Makeup!</h2>
-                    <h2 class="hero-subtitle fade-in fade-in-delay-1 parallax-3d">Join the Best Makeup Course at UK
-                        International</h2>
-                    <p class="hero-description fade-in fade-in-delay-2">
-                        Learn professional makeup at UK International with hands-on training and global certification.
-                    </p>
-                </div>
-               <div class="hero-form-container">
-    <div class="hero-contact-form fade-in fade-in-delay-1 card-3d morph-3d" 
-         style="padding:20px;border-radius:12px;background:linear-gradient(145deg,#1a1a1a,#0e0e0e);box-shadow:0 8px 25px rgba(0,0,0,0.3);">
-        <h3 class="form-title" style="font-size:1.4rem;margin-bottom:15px;color:#ff4fd8;text-align:center;">
-            Get Started Today!
-        </h3>
-        <form>
-            <div class="form-group" style="margin-bottom:12px;">
-                <input type="text" placeholder="Your Name" required aria-label="Your Name"
-                       style="padding:10px 14px;font-size:0.95rem;width:100%;border-radius:8px;border:1px solid #444;background:#121212;color:#fff;transition:0.3s;">
-            </div>
-            <div class="form-group" style="margin-bottom:12px;">
-                <input type="email" placeholder="Your Email" required aria-label="Your Email"
-                       style="padding:10px 14px;font-size:0.95rem;width:100%;border-radius:8px;border:1px solid #444;background:#121212;color:#fff;transition:0.3s;">
-            </div>
-            <div class="form-group" style="margin-bottom:12px;">
-                <input type="tel" placeholder="Your Phone Number" required aria-label="Your Phone Number"
-                       style="padding:10px 14px;font-size:0.95rem;width:100%;border-radius:8px;border:1px solid #444;background:#121212;color:#fff;transition:0.3s;">
-            </div>
-            <div class="form-group" style="margin-bottom:12px;">
-                <input type="text" placeholder="Course Name" required aria-label="Course Name"
-                       style="padding:10px 14px;font-size:0.95rem;width:100%;border-radius:8px;border:1px solid #444;background:#121212;color:#fff;transition:0.3s;">
-            </div>
-            <div class="form-group" style="margin-bottom:12px;">
-                <textarea rows="4" placeholder="Your Message" required aria-label="Your Message"
-                          style="padding:10px 14px;font-size:0.95rem;width:100%;border-radius:8px;border:1px solid #444;background:#121212;color:#fff;min-height:80px;transition:0.3s;"></textarea>
-            </div>
-            <button type="submit" aria-label="Enroll Now"
-                    style="width:100%;padding:12px 20px;border:none;border-radius:50px;background:linear-gradient(90deg,#ff4fd8,#ff92f4);color:#fff;font-size:1rem;font-weight:600;cursor:pointer;box-shadow:0 4px 15px rgba(255,79,216,0.4);transition:all 0.3s ease;">
-                Enroll Now – Transform Your Passion into Profession!
-            </button>
-        </form>
-    </div>
-</div>
+  <style>
+.hero {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    padding: 80px 0;
+    position: relative;
+    overflow: hidden;
+}
 
+.hero-slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+      background-size: cover;
+    background-position: top center; /* align top instead of center */
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+.hero-slide.active {
+    opacity: 1;
+}
+</style>
+
+<!-- Section 1: Hero Banner -->
+<section class="section hero gradient-bg section-bg-1a1a1a">
+    <!-- Slider Backgrounds -->
+    <div class="hero-slide active" style="background-image: url('b.png');"></div>
+    <div class="hero-slide" style="background-image: url('banner.jpg');"></div>
+
+    <div class="container">
+        <div class="hero-content" style="padding-top: 60px; position: relative; z-index: 2;">
+            <div class="hero-text">
+                <h2 class="hero-title fade-in float-3d">Master the Art of Professional Makeup!</h2>
+                <h2 class="hero-subtitle fade-in fade-in-delay-1 parallax-3d">Join the Best Makeup Course at UK
+                    International</h2>
+                <p class="hero-description fade-in fade-in-delay-2">
+                    Learn professional makeup at UK International with hands-on training and global certification.
+                </p>
+            </div>
+
+            <div class="hero-form-container">
+                <div class="hero-contact-form fade-in fade-in-delay-1 card-3d morph-3d"
+                    style="padding:20px;border-radius:12px;background:linear-gradient(145deg,#1a1a1a,#0e0e0e);box-shadow:0 8px 25px rgba(0,0,0,0.3);">
+                    <h3 class="form-title"
+                        style="font-size:1.4rem;margin-bottom:15px;color:#ff4fd8;text-align:center;">
+                        Get Started Today!
+                    </h3>
+                    <form>
+                        <div class="form-group" style="margin-bottom:12px;">
+                            <input type="text" placeholder="Your Name" required aria-label="Your Name"
+                                style="padding:10px 14px;font-size:0.95rem;width:100%;border-radius:8px;border:1px solid #444;background:#121212;color:#fff;transition:0.3s;">
+                        </div>
+                        <div class="form-group" style="margin-bottom:12px;">
+                            <input type="email" placeholder="Your Email" required aria-label="Your Email"
+                                style="padding:10px 14px;font-size:0.95rem;width:100%;border-radius:8px;border:1px solid #444;background:#121212;color:#fff;transition:0.3s;">
+                        </div>
+                        <div class="form-group" style="margin-bottom:12px;">
+                            <input type="tel" placeholder="Your Phone Number" required aria-label="Your Phone Number"
+                                style="padding:10px 14px;font-size:0.95rem;width:100%;border-radius:8px;border:1px solid #444;background:#121212;color:#fff;transition:0.3s;">
+                        </div>
+                        <div class="form-group" style="margin-bottom:12px;">
+                            <input type="text" placeholder="Course Name" required aria-label="Course Name"
+                                style="padding:10px 14px;font-size:0.95rem;width:100%;border-radius:8px;border:1px solid #444;background:#121212;color:#fff;transition:0.3s;">
+                        </div>
+                        <div class="form-group" style="margin-bottom:12px;">
+                            <textarea rows="4" placeholder="Your Message" required aria-label="Your Message"
+                                style="padding:10px 14px;font-size:0.95rem;width:100%;border-radius:8px;border:1px solid #444;background:#121212;color:#fff;min-height:80px;transition:0.3s;"></textarea>
+                        </div>
+                        <button type="submit" aria-label="Enroll Now"
+                            style="width:100%;padding:12px 20px;border:none;border-radius:50px;background:linear-gradient(90deg,#ff4fd8,#ff92f4);color:#fff;font-size:1rem;font-weight:600;cursor:pointer;box-shadow:0 4px 15px rgba(255,79,216,0.4);transition:all 0.3s ease;">
+                            Enroll Now – Transform Your Passion into Profession!
+                        </button>
+                    </form>
+                </div>
             </div>
         </div>
-    </section>
+    </div>
+</section>
+
+<script>
+let currentSlide = 0;
+const slides = document.querySelectorAll('.hero-slide');
+
+setInterval(() => {
+    slides[currentSlide].classList.remove('active');
+    currentSlide = (currentSlide + 1) % slides.length;
+    slides[currentSlide].classList.add('active');
+}, 4000); // change every 4 seconds
+</script>
 
     <!-- Section 2: Career Start -->
     <section class="career-section section-bg-030303">
@@ -3026,7 +3070,7 @@ padding: 40px 0; /* Reduced from 100px 0 */        color: #fff;
         background-size: cover; 
         background-position: center; 
         background-repeat: no-repeat;
-        padding: 40px 0;
+        padding: 10px 0;
         color: #fff; 
         text-align: center;
     "
@@ -3153,13 +3197,12 @@ padding: 40px 0; /* Reduced from 100px 0 */        color: #fff;
 
 
     <!-- Section 8: Certification -->
-   <section class="cert-career-section">
+   <!-- <section class="cert-career-section">
     <div class="container">
         <div class="section-header">
             <h2>🎓 Certification & Career Support</h2>
         </div>
         <div class="content-wrapper">
-            <!-- Left Content -->
             <div class="text-content">
                 <p>
                     Earn an <strong>industry-recognized certificate</strong> that boosts your resume and credibility.
@@ -3168,18 +3211,16 @@ padding: 40px 0; /* Reduced from 100px 0 */        color: #fff;
                 </p>
             </div>
 
-            <!-- Right Image -->
             <div class="image-content">
                 <img src="certificate.jpeg" alt="Career Support Certificate">
             </div>
         </div>
 
-        <!-- Button -->
         <div class="btn-container">
             <a href="#contact" class="btn-inquire">Inquire Now</a>
         </div>
     </div>
-</section>
+</section> -->
 
 <style>
 .cert-career-section {
@@ -3284,7 +3325,7 @@ padding: 40px 0; /* Reduced from 100px 0 */        color: #fff;
 </style>
 
     <!-- Section 9: Testimonials -->
-    <section class="section gradient-bg section-bg-1a1a1a">
+    <section class="section gradient-bg section-bg-1a1a1a" style="padding:50px 0px;">
         <div class="container">
             <div class="section-content">
                 <h2 class="section-title fade-in" style="text-align:center;">From Students to Makeup Stars</h2>
@@ -3351,7 +3392,7 @@ padding: 40px 0; /* Reduced from 100px 0 */        color: #fff;
         background-repeat: no-repeat;
         background-color: rgba(255,255,255,0.25); /* light overlay */
         background-blend-mode: lighten; /* blends overlay with image */
-        padding: 60px 20px; 
+        padding: 40px 0px; 
         color: #fff; 
         text-align: center;
     "
