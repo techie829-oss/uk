@@ -48,8 +48,7 @@
         .section-title {
             font-size: 2.2rem;
             font-weight: bold;
-            color: #ff4fd8;
-            text-shadow: 0 0 15px rgba(255, 79, 216, 0.7);
+            color: #f8069d;
             margin-bottom: 40px;
         }
 
@@ -80,7 +79,7 @@
             width: 80px;
             height: 80px;
             background: #ffb4eb;
-            color: #a10058;
+            color: #f8069d
             border-radius: 50%;
             display: flex;
             align-items: center;
@@ -93,7 +92,7 @@
         .achievement-text h3 {
             font-size: 1.8rem;
             font-weight: bold;
-            color: #ff4fd8;
+            color: #f8069d;
             margin: 0;
         }
 
@@ -120,11 +119,11 @@
 
             0%,
             100% {
-                filter: drop-shadow(0 0 8px #ff4ac1);
+                filter: drop-shadow(0 0 8px #f8069d);
             }
 
             50% {
-                filter: drop-shadow(0 0 20px #ff4ac1) drop-shadow(0 0 30px #ff4ac1);
+                filter: drop-shadow(0 0 20px #f8069d) drop-shadow(0 0 30px #f8069d);
             }
         }
 
@@ -180,11 +179,11 @@
 
             0%,
             100% {
-                background: linear-gradient(135deg, #ff4ac1 0%, #d904a3 100%);
+                background: linear-gradient(135deg, #f8069d 0%, #f8069d 100%);
             }
 
             50% {
-                background: linear-gradient(135deg, #d904a3 0%, #ff4ac1 100%);
+                background: linear-gradient(135deg, #f8069d  0%, #f8069d 100%);
             }
         }
 
@@ -203,17 +202,14 @@
         @keyframes text3DTransition {
             0% {
                 transform: translateZ(0px) rotateY(0deg) scale(1);
-                text-shadow: 0 0 8px rgba(255, 74, 193, 0.5);
             }
 
             50% {
                 transform: translateZ(40px) rotateY(8deg) scale(1.08);
-                text-shadow: 0 0 15px rgba(255, 74, 193, 0.8), 0 0 25px rgba(255, 74, 193, 0.5);
             }
 
             100% {
                 transform: translateZ(0px) rotateY(0deg) scale(1);
-                text-shadow: 0 0 8px rgba(255, 74, 193, 0.5);
             }
         }
 
@@ -243,7 +239,7 @@
             position: absolute;
             width: 3px;
             height: 3px;
-            background: #ff4ac1;
+            background: #f8069d;
             border-radius: 50%;
             animation: float-particle 5s ease-in-out infinite;
             opacity: 0.5;
@@ -302,7 +298,6 @@
 
         .header .btn:hover {
             transform: translateY(-2px);
-            box-shadow: 0 4px 15px rgba(255, 74, 193, 0.3);
         }
 
         .logo img {
@@ -403,7 +398,7 @@ padding: 40px 0; /* Reduced from 100px 0 */
             font-weight: 900;
             line-height: 1.15;
             margin-bottom: 1.5rem;
-            background: linear-gradient(135deg, #ffffff 0%, #ff4ac1 100%);
+            background: #f8069d;
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
@@ -453,7 +448,7 @@ padding: 40px 0; /* Reduced from 100px 0 */
             left: -50%;
             width: 200%;
             height: 200%;
-            background: linear-gradient(45deg, transparent, rgba(255, 74, 193, 0.15), transparent);
+            background: #f8069d;
             transform: rotate(45deg) translateX(-100%);
             transition: transform 0.7s ease;
         }
@@ -464,14 +459,13 @@ padding: 40px 0; /* Reduced from 100px 0 */
 
         .hero-contact-form:hover {
             transform: rotateY(4deg) rotateX(4deg) translateZ(15px) scale(1.01);
-            box-shadow: 0 25px 50px rgba(255, 74, 193, 0.25);
             border-color: rgba(255, 74, 193, 0.5);
         }
 
         .form-title {
             font-size: 1.8rem;
             font-weight: 700;
-            color: #ff4ac1;
+            color: #f8069d;
             margin-bottom: 1.8rem;
             text-align: center;
             animation: textGlowPulse 2.5s ease-in-out infinite;
@@ -496,14 +490,13 @@ padding: 40px 0; /* Reduced from 100px 0 */
         .btn-primary {
             background: linear-gradient(135deg, #ff4ac1 0%, #d904a3 100%);
             color: #ffffff;
-            box-shadow: 0 8px 25px rgba(255, 74, 193, 0.3);
             animation: colorTransition 2.5s ease-in-out infinite;
         }
 
         .btn-secondary {
             background: transparent;
-            color: #ff4ac1;
-            border: 2px solid #ff4ac1;
+            color: #f8069d;
+            border: 2px solid #f8069d;
         }
 
         .card {
@@ -527,7 +520,6 @@ padding: 40px 0; /* Reduced from 100px 0 */
             left: -100%;
             width: 100%;
             height: 100%;
-            background: linear-gradient(90deg, transparent, rgba(255, 74, 193, 0.15), transparent);
             transition: left 0.7s ease;
         }
 
@@ -537,25 +529,14 @@ padding: 40px 0; /* Reduced from 100px 0 */
 
         .card:hover {
             transform: rotateY(4deg) rotateX(4deg) translateZ(15px) scale(1.01);
-            box-shadow: 0 25px 50px rgba(255, 74, 193, 0.25);
             border-color: rgba(255, 74, 193, 0.5);
             animation: rotate3D 0.8s ease-in-out;
         }
 
         .hero-title {
-            text-shadow: 0 0 8px rgba(255, 74, 193, 0.5), 0 0 15px rgba(255, 74, 193, 0.3);
         }
 
-        @keyframes textGlow {
-            from {
-                text-shadow: 0 0 8px rgba(255, 74, 193, 0.5), 0 0 15px rgba(255, 74, 193, 0.3);
-            }
-
-            to {
-                text-shadow: 0 0 15px rgba(255, 74, 193, 0.8), 0 0 25px rgba(255, 74, 193, 0.5);
-            }
-        }
-
+       
         .card-3d {
             transform-style: preserve-3d;
             perspective: 1000px;
@@ -574,29 +555,9 @@ padding: 40px 0; /* Reduced from 100px 0 */
 
         .btn-3d:hover {
             transform: translateY(-4px) rotateX(8deg) rotateY(4deg) scale(1.08);
-            box-shadow: 0 15px 30px rgba(255, 74, 193, 0.35), 0 0 0 1px rgba(255, 74, 193, 0.2);
         }
 
-        @keyframes float3D {
-
-            0%,
-            100% {
-                transform: translateY(0px) rotateX(0deg) rotateY(0deg);
-            }
-
-            25% {
-                transform: translateY(-8px) rotateX(1.5deg) rotateY(0.8deg);
-            }
-
-            50% {
-                transform: translateY(-4px) rotateX(-0.8deg) rotateY(1.5deg);
-            }
-
-            75% {
-                transform: translateY(-12px) rotateX(0.8deg) rotateY(-0.8deg);
-            }
-        }
-
+       
         .float-3d {
             animation: float3D 5s ease-in-out infinite;
         }
@@ -606,29 +567,7 @@ padding: 40px 0; /* Reduced from 100px 0 */
             transition: transform 0.2s ease-out;
         }
 
-        @keyframes glitch3D {
-
-            0%,
-            100% {
-                transform: translate(0);
-            }
-
-            20% {
-                transform: translate(-1.5px, 1.5px);
-            }
-
-            40% {
-                transform: translate(-1.5px, -1.5px);
-            }
-
-            60% {
-                transform: translate(1.5px, 1.5px);
-            }
-
-            80% {
-                transform: translate(1.5px, -1.5px);
-            }
-        }
+       
 
         .glitch-3d:hover {
             animation: glitch3D 0.25s ease-in-out;
@@ -655,25 +594,7 @@ padding: 40px 0; /* Reduced from 100px 0 */
             transform: rotate(45deg) translateX(100%);
         }
 
-        @keyframes ripple {
-            to {
-                transform: scale(3.5);
-                opacity: 0;
-            }
-        }
-
-        @keyframes buttonPulse {
-
-            0%,
-            100% {
-                box-shadow: 0 8px 25px rgba(255, 74, 193, 0.3);
-            }
-
-            50% {
-                box-shadow: 0 12px 35px rgba(255, 74, 193, 0.5);
-            }
-        }
-
+       =
         .btn-pulse {
             animation: buttonPulse 2s ease-in-out infinite;
         }
@@ -684,37 +605,9 @@ padding: 40px 0; /* Reduced from 100px 0 */
 
         .card-3d-hover:hover {
             transform: translateY(-8px) rotateX(4deg) rotateY(4deg) scale(1.01);
-            box-shadow: 0 25px 50px rgba(255, 74, 193, 0.25), 0 0 0 1px rgba(255, 74, 193, 0.2);
         }
 
-        @keyframes cardFloat {
-
-            0%,
-            100% {
-                transform: translateY(0px) rotateX(0deg);
-            }
-
-            50% {
-                transform: translateY(-12px) rotateX(1.5deg);
-            }
-        }
-
-        .card-float {
-            animation: cardFloat 3.5s ease-in-out infinite;
-        }
-
-        @keyframes textGlowPulse {
-
-            0%,
-            100% {
-                text-shadow: 0 0 8px rgba(255, 74, 193, 0.5), 0 0 15px rgba(255, 74, 193, 0.3);
-            }
-
-            50% {
-                text-shadow: 0 0 15px rgba(255, 74, 193, 0.8), 0 0 25px rgba(255, 74, 193, 0.5);
-            }
-        }
-
+       
         .text-glow-pulse {
             animation: textGlowPulse 2.5s ease-in-out infinite;
         }
@@ -778,7 +671,7 @@ padding: 40px 0; /* Reduced from 100px 0 */
             content: '\f00c';
             font-family: "Font Awesome 6 Free";
             font-weight: 900;
-            color: #ff4ac1;
+            color: #f8069d;
             margin-right: 0.6rem;
         }
 
@@ -787,7 +680,7 @@ padding: 40px 0; /* Reduced from 100px 0 */
             font-weight: 800;
             text-align: center;
             margin-bottom: 1.5rem;
-            background: linear-gradient(135deg, #ffffff 0%, #ff4ac1 100%);
+            background: #f8069d;
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
@@ -818,7 +711,7 @@ padding: 40px 0; /* Reduced from 100px 0 */
 
         .testimonial-author {
             font-weight: 600;
-            color: #ff4ac1;
+            color: #f8069d;
         }
 
         .contact-form {
@@ -847,8 +740,7 @@ padding: 40px 0; /* Reduced from 100px 0 */
 
         .form-input:focus {
             outline: none;
-            border-color: #ff4ac1;
-            box-shadow: 0 0 15px rgba(255, 74, 193, 0.3);
+            border-color: #f8069d;
         }
 
         .form-input::placeholder {
@@ -900,7 +792,7 @@ padding: 40px 0; /* Reduced from 100px 0 */
         }
 
         .why-choose h3 {
-            color: #ff4ac1;
+            color: #f8069d;
             font-size: 1.6rem;
             margin-bottom: 1rem;
         }
@@ -929,7 +821,6 @@ padding: 40px 0; /* Reduced from 100px 0 */
         }
 
         .career-card:hover {
-            box-shadow: 0 10px 25px rgba(255, 74, 193, 0.3);
             transform: translateY(-6px);
         }
 
@@ -937,7 +828,7 @@ padding: 40px 0; /* Reduced from 100px 0 */
             width: 80px;
             height: 80px;
             background: #fce4f1;
-            color: #a10058;
+            color: #f8069d;
             border-radius: 50%;
             display: flex;
             align-items: center;
@@ -949,7 +840,7 @@ padding: 40px 0; /* Reduced from 100px 0 */
         .career-card h3 {
             font-size: 1.2rem;
             font-weight: bold;
-            color: #ff4ac1;
+            color: #f8069d;
             margin-bottom: 1rem;
         }
 
@@ -965,7 +856,7 @@ padding: 40px 0; /* Reduced from 100px 0 */
         }
 
         .btn-apply {
-            background: linear-gradient(135deg, #ff4ac1 0%, #d904a3 100%);
+            background: #f8069d;
             color: #ffffff;
             padding: 16px 32px;
             border-radius: 40px;
@@ -978,7 +869,7 @@ padding: 40px 0; /* Reduced from 100px 0 */
 
         .btn-apply:hover {
             background: #ffffff;
-            color: #ff4ac1;
+            color: #f8069d;
             box-shadow: 0 10px 25px rgba(255, 74, 193, 0.4);
         }
 
@@ -1027,7 +918,7 @@ padding: 40px 0; /* Reduced from 100px 0 */
         }
 
         #course-details .training-heading {
-            color: #ff4ac1;
+            color: #f8069d;
             font-size: 1.2rem;
             margin-bottom: 0.8rem;
         }
@@ -1050,7 +941,7 @@ padding: 40px 0; /* Reduced from 100px 0 */
 
         #course-details .training-list li::before {
             content: '✔';
-            color: #ff4ac1;
+            color: #f8069d;
             margin-right: 0.6rem;
         }
 
@@ -1060,7 +951,7 @@ padding: 40px 0; /* Reduced from 100px 0 */
 
         #course-details .btn {
             background: transparent;
-            border: 2px solid #ff4ac1;
+            border: 2px solid #f8069d;
             padding: 10px 22px;
             border-radius: 40px;
             color: #ffffff;
@@ -1070,7 +961,7 @@ padding: 40px 0; /* Reduced from 100px 0 */
         }
 
         #course-details .btn:hover {
-            background: linear-gradient(135deg, #ff4ac1 0%, #d904a3 100%);
+            background: #f8069d;
             color: #ffffff;
         }
 
@@ -1099,34 +990,31 @@ padding: 40px 0; /* Reduced from 100px 0 */
             padding: 2.5rem 1.5rem;
             border-radius: 15px;
             border: 1px solid rgba(255, 74, 193, 0.4);
-            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
             transition: all 0.4s ease;
         }
 
         .achievement-card:hover {
             transform: translateY(-6px) scale(1.03);
-            box-shadow: 0 10px 30px rgba(255, 74, 193, 0.35);
         }
 
         .achievement-card .icon-circle {
             width: 80px;
             height: 80px;
             background: #fce4f1;
-            color: #a10058;
+            color: #f8069d;
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
             font-size: 32px;
             margin: 0 auto 1.5rem auto;
-            box-shadow: 0 0 12px rgba(255, 74, 193, 0.4);
             animation: pulse 1.8s infinite;
         }
 
         .achievement-card h3 {
             font-size: 2rem;
             font-weight: bold;
-            color: #ff4ac1;
+            color: #f8069d;
             margin-bottom: 0.8rem;
         }
 
@@ -1136,7 +1024,7 @@ padding: 40px 0; /* Reduced from 100px 0 */
         }
 
         .btn-enroll {
-            background: linear-gradient(135deg, #ff4ac1 0%, #d904a3 100%);
+            background: #f8069d;
             color: #ffffff;
             padding: 12px 30px;
             border-radius: 40px;
@@ -1148,8 +1036,7 @@ padding: 40px 0; /* Reduced from 100px 0 */
 
         .btn-enroll:hover {
             background: #ffffff;
-            color: #ff4ac1;
-            box-shadow: 0 10px 25px rgba(255, 74, 193, 0.4);
+            color: #f8069d;
         }
 
         /* Who Is This Course For Section */
@@ -1185,28 +1072,26 @@ padding: 40px 0; /* Reduced from 100px 0 */
 
         .who-card:hover {
             transform: translateY(-6px) scale(1.03);
-            box-shadow: 0 10px 30px rgba(255, 74, 193, 0.35);
         }
 
         .who-card .icon-circle {
             width: 80px;
             height: 80px;
             background: #fce4f1;
-            color: #a10058;
+            color: #f8069d;
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
             font-size: 32px;
             margin: 0 auto 1.5rem auto;
-            box-shadow: 0 0 12px rgba(255, 74, 193, 0.4);
             animation: pulse 1.8s infinite;
         }
 
         .who-card h3 {
             font-size: 1.3rem;
             font-weight: bold;
-            color: #ff4ac1;
+            color: #f8069d;
             margin-bottom: 1rem;
         }
 
@@ -1217,7 +1102,7 @@ padding: 40px 0; /* Reduced from 100px 0 */
         }
 
         .btn-primary-pulse {
-            background: linear-gradient(135deg, #ff4ac1 0%, #d904a3 100%);
+            background: #f8069d;
             color: #ffffff;
             padding: 12px 30px;
             border-radius: 40px;
@@ -1225,13 +1110,11 @@ padding: 40px 0; /* Reduced from 100px 0 */
             text-transform: uppercase;
             text-decoration: none;
             transition: all 0.3s ease;
-            box-shadow: 0 8px 25px rgba(255, 74, 193, 0.4);
         }
 
         .btn-primary-pulse:hover {
             background: #ffffff;
-            color: #ff4ac1;
-            box-shadow: 0 10px 25px rgba(255, 74, 193, 0.5);
+            color: #f8069d;
         }
 
         /* Large screens - ensure 4 cards in a row */
@@ -2064,34 +1947,15 @@ padding: 40px 0; /* Reduced from 100px 0 */
         }
 
         ::-webkit-scrollbar-thumb {
-            background: #ff4ac1;
+            background: #f8069d;
             border-radius: 3px;
         }
 
         ::-webkit-scrollbar-thumb:hover {
-            background: #d904a3;
+            background: #f8069d;
         }
 
-        .fade-in {
-            opacity: 0;
-            animation: fadeInUp 0.8s ease-out forwards;
-        }
-
-        .fade-in-delay-1 {
-            animation-delay: 0.2s;
-        }
-
-        .fade-in-delay-2 {
-            animation-delay: 0.4s;
-        }
-
-        .fade-in-delay-3 {
-            animation-delay: 0.6s;
-        }
-
-        .fade-in-delay-4 {
-            animation-delay: 0.8s;
-        }
+       
 
         /* Additional responsive improvements */
         .swiper {
@@ -2143,14 +2007,14 @@ padding: 40px 0; /* Reduced from 100px 0 */
         }
 
         .partner-name {
-            color: #ff4ac1;
+            color: #f8069d;
             font-weight: 600;
             font-size: 0.95rem;
         }
 
         .swiper-button-next,
         .swiper-button-prev {
-            color: #ff4ac1;
+            color: #f8069d;
         }
 
         /* Mobile-first improvements */
@@ -2172,13 +2036,11 @@ padding: 40px 0; /* Reduced from 100px 0 */
             background: #030303;
             border-radius: 12px;
             overflow: hidden;
-            box-shadow: 0 8px 25px rgba(248, 6, 217, 0.25);
             transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
 
         .learn-card:hover {
             transform: translateY(-8px);
-            box-shadow: 0 12px 35px rgba(248, 6, 217, 0.5);
         }
 
         .learn-image img {
@@ -2212,7 +2074,7 @@ padding: 40px 0; /* Reduced from 100px 0 */
             content: "✔";
             position: absolute;
             left: 0;
-            color: #f806d9;
+            color: #f8069d;
         }
 
         .feature-list li:last-child {
@@ -2221,19 +2083,18 @@ padding: 40px 0; /* Reduced from 100px 0 */
 
         /* Button */
         .btn {
-            background-color: #f806d9;
+            background-color: #f8069d;
             color: #030303;
             padding: 0.8rem 1.6rem;
             border-radius: 30px;
             font-size: 1rem;
             font-weight: bold;
             text-decoration: none;
-            box-shadow: 0 0 20px rgba(248, 6, 217, 0.5);
             transition: background 0.3s ease, transform 0.3s ease;
         }
 
         .btn:hover {
-            background-color: #ff33e6;
+            background-color: #f8069d;
             transform: scale(1.05);
         }
 
@@ -2283,7 +2144,6 @@ padding: 40px 0; /* Reduced from 100px 0 */
             .career-card,
             .who-card {
                 cursor: pointer;
-                -webkit-tap-highlight-color: rgba(255, 74, 193, 0.2);
             }
 
             /* Better spacing for mobile */
@@ -2599,7 +2459,7 @@ padding: 40px 0; /* Reduced from 100px 0 */
     <div class="container">
         <div class="hero-content" style="padding-top: 60px; position: relative; z-index: 2;">
             <div class="hero-text">
-                <h2 class="hero-title fade-in float-3d">Master the Art of Professional Makeup!</h2>
+                <h2 class="hero-title">Master the Art of Professional Makeup!</h2>
               <h1 class="hero-subtitle fade-in fade-in-delay-1 parallax-3d" style="font-weight:bold;">
     Join the Best Makeup Course at UK International
 </h1>
@@ -2638,7 +2498,7 @@ padding: 40px 0; /* Reduced from 100px 0 */
                                 style="padding:10px 14px;font-size:0.95rem;width:100%;border-radius:8px;border:1px solid #444;background:#121212;color:#fff;min-height:80px;transition:0.3s;"></textarea>
                         </div>
                         <button type="submit" aria-label="Enroll Now"
-                            style="width:100%;padding:12px 20px;border:none;border-radius:50px;background:linear-gradient(90deg,#ff4fd8,#ff92f4);color:#fff;font-size:1rem;font-weight:600;cursor:pointer;box-shadow:0 4px 15px rgba(255,79,216,0.4);transition:all 0.3s ease;">
+                            style="width:100%;padding:12px 20px;border:none;border-radius:50px;background:#f8069d;color:#fff;font-size:1rem;font-weight:600;cursor:pointer;box-shadow:0 4px 15px rgba(255,79,216,0.4);transition:all 0.3s ease;">
                             Enroll Now – Transform Your Passion into Profession!
                         </button>
                     </form>
@@ -2660,10 +2520,24 @@ setInterval(() => {
 </script>
 
     <!-- Section 2: Career Start -->
-    <section class="career-section section-bg-030303">
+    <section class="career-section section-bg-030303" 
+     style="
+        position: relative;
+        background: 
+            linear-gradient(rgba(0, 0, 0, 0.62), rgba(0,0,0,0.6)),
+            url('bani3.jpeg');
+        background-size: cover;       /* Fill full width */
+        background-position: center top; /* Keep important part visible */
+        background-repeat: no-repeat;
+        padding: 40px 0;
+        color: #fff;
+        text-align: center;
+        backdrop-filter: blur(3px);
+    "
+>
         <div class="container">
             <div class="section-header fade-in">
-                <h2 class="section-title">Start a Successful Career in Makeup</h2>
+                <h2 class="section-title" style="color:#f8069d !important">Start a Successful Career in Makeup</h2>
             </div>
             <div class="why-choose fade-in fade-in-delay-2">
                 <h3>Why Choose UK International?</h3>
@@ -2720,14 +2594,21 @@ setInterval(() => {
               
 @media (max-width: 768px) {
     .course-image {
+        display: flex;
         flex-direction: column; /* Stack vertically */
-        height: auto; /* Remove fixed height */
-        overflow: visible; /* Prevent cutting */
+        height: auto;
+        overflow: hidden;
+        gap: 20px; /* Adds space between images */
+        margin: 0;
+        padding: 0;
     }
+
     .course-image img {
         width: 100%; /* Full width image */
         height: auto; /* Keep aspect ratio */
-        object-fit: contain; /* Show whole image */
+        object-fit: cover; /* Fill width nicely */
+        display: block;
+        border-radius: 10px; /* Optional: rounded corners */
     }
 }
 
@@ -2825,42 +2706,42 @@ padding: 40px 0; /* Reduced from 100px 0 */        color: #fff;
     "
 >     
     <div class="container">
-        <h2 class="section-title fade-in" style="font-size: 2.8rem; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 40px; color: #f806d9; text-shadow: 2px 2px 6px rgba(3,3,3,0.6);">
+        <h2 class="section-title fade-in" style="font-size: 2.8rem; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 40px; color: #f8069d;">
             🎯 Who Is This Course For?
         </h2>
         <div class="who-for-grid fade-in fade-in-delay-1" style="display: flex; gap: 25px; flex-wrap: wrap; justify-content: center;">
-            <div class="who-card" style="background: linear-gradient(145deg, #030303, #1a1a1a); color: #f806d9; border-radius: 50% 50% 0 0; padding: 25px; width: 240px; text-align: center; box-shadow: 0 8px 20px rgba(3,3,3,0.5); transition: transform 0.3s ease, box-shadow 0.3s ease; transform: perspective(500px) translateZ(0);">
-                <div class="icon-circle" style="font-size: 48px; margin-bottom: 15px; color: #f806d9; text-shadow: 0 0 10px rgba(248,6,217,0.6);">
+            <div class="who-card" style="background: linear-gradient(145deg, #030303, #1a1a1a); color: #f8069d; border-radius: 50% 50% 0 0; padding: 25px; width: 240px; text-align: center; box-shadow: 0 8px 20px rgba(3,3,3,0.5); transition: transform 0.3s ease, box-shadow 0.3s ease; transform: perspective(500px) translateZ(0);">
+                <div class="icon-circle" style="font-size: 48px; margin-bottom: 15px; color: #f8069d;">
                     <i class="fas fa-seedling"></i>
                 </div>
-                <h3 style="font-size: 1.5rem; font-weight: 600; margin-bottom: 10px; color: #f806d9;">Beginners</h3>
+                <h3 style="font-size: 1.5rem; font-weight: 600; margin-bottom: 10px; color: #f8069d;">Beginners</h3>
                 <p style="font-size: 1rem; line-height: 1.5; color: white;">No or basic makeup knowledge? This course is your perfect start.</p>
             </div>
-            <div class="who-card" style="background: linear-gradient(145deg, #030303, #1a1a1a); color: #f806d9; border-radius: 50% 50% 0 0; padding: 25px; width: 240px; text-align: center; box-shadow: 0 8px 20px rgba(3,3,3,0.5); transition: transform 0.3s ease, box-shadow 0.3s ease; transform: perspective(500px) translateZ(0);">
-                <div class="icon-circle" style="font-size: 48px; margin-bottom: 15px; color: #f806d9; text-shadow: 0 0 10px rgba(248,6,217,0.6);">
+            <div class="who-card" style="background: linear-gradient(145deg, #030303, #1a1a1a); color: #f8069d; border-radius: 50% 50% 0 0; padding: 25px; width: 240px; text-align: center; box-shadow: 0 8px 20px rgba(3,3,3,0.5); transition: transform 0.3s ease, box-shadow 0.3s ease; transform: perspective(500px) translateZ(0);">
+                <div class="icon-circle" style="font-size: 48px; margin-bottom: 15px; color: #f8069d; ">
                     <i class="fas fa-user-graduate"></i>
                 </div>
-                <h3 style="font-size: 1.5rem; font-weight: 600; margin-bottom: 10px; color: #f806d9;">Students</h3>
+                <h3 style="font-size: 1.5rem; font-weight: 600; margin-bottom: 10px; color: #f8069d;">Students</h3>
                 <p style="font-size: 1rem; line-height: 1.5; color: white;">Turn your creativity into a professional career.</p>
             </div>
-            <div class="who-card" style="background: linear-gradient(145deg, #030303, #1a1a1a); color: #f806d9; border-radius: 50% 50% 0 0; padding: 25px; width: 240px; text-align: center; box-shadow: 0 8px 20px rgba(3,3,3,0.5); transition: transform 0.3s ease, box-shadow 0.3s ease; transform: perspective(500px) translateZ(0);">
-                <div class="icon-circle" style="font-size: 48px; margin-bottom: 15px; color: #f806d9; text-shadow: 0 0 10px rgba(248,6,217,0.6);">
+            <div class="who-card" style="background: linear-gradient(145deg, #030303, #1a1a1a); color: #f8069d; border-radius: 50% 50% 0 0; padding: 25px; width: 240px; text-align: center; box-shadow: 0 8px 20px rgba(3,3,3,0.5); transition: transform 0.3s ease, box-shadow 0.3s ease; transform: perspective(500px) translateZ(0);">
+                <div class="icon-circle" style="font-size: 48px; margin-bottom: 15px; color: #f8069d; ">
                     <i class="fas fa-user-tie"></i>
                 </div>
-                <h3 style="font-size: 1.5rem; font-weight: 600; margin-bottom: 10px; color: #f806d9;">Freelancers</h3>
+                <h3 style="font-size: 1.5rem; font-weight: 600; margin-bottom: 10px; color: #f8069d;">Freelancers</h3>
                 <p style="font-size: 1rem; line-height: 1.5; color: white;">Upgrade your skills and attract more clients.</p>
             </div>
-            <div class="who-card" style="background: linear-gradient(145deg, #030303, #1a1a1a); color: #f806d9; border-radius: 50% 50% 0 0; padding: 25px; width: 240px; text-align: center; box-shadow: 0 8px 20px rgba(3,3,3,0.5); transition: transform 0.3s ease, box-shadow 0.3s ease; transform: perspective(500px) translateZ(0);">
-                <div class="icon-circle" style="font-size: 48px; margin-bottom: 15px; color: #f806d9; text-shadow: 0 0 10px rgba(248,6,217,0.6);">
+            <div class="who-card" style="background: linear-gradient(145deg, #030303, #1a1a1a); color: #f8069d; border-radius: 50% 50% 0 0; padding: 25px; width: 240px; text-align: center; box-shadow: 0 8px 20px rgba(3,3,3,0.5); transition: transform 0.3s ease, box-shadow 0.3s ease; transform: perspective(500px) translateZ(0);">
+                <div class="icon-circle" style="font-size: 48px; margin-bottom: 15px; color: #f8069d;">
                     <i class="fas fa-cut"></i>
                 </div>
-                <h3 style="font-size: 1.5rem; font-weight: 600; margin-bottom: 10px; color: #f806d9;">Professionals</h3>
+                <h3 style="font-size: 1.5rem; font-weight: 600; margin-bottom: 10px; color: #f8069d;">Professionals</h3>
                 <p style="font-size: 1rem; line-height: 1.5; color: white;">Offer premium makeup services & grow your business.</p>
             </div>
         </div>
         <div style="text-align: center; margin-top: 2.5rem;">
             <a href="#contact" class="btn btn-primary fade-in fade-in-delay-3 btn-3d btn-enhanced btn-pulse" 
-               style="background:#f806d9;; padding: 15px 40px; font-size: 1.2rem; font-weight: 600; text-transform: uppercase; border-radius: 50px; box-shadow: 0 6px 15px rgba(248,6,217,0.5); transition: transform 0.3s ease, box-shadow 0.3s ease; text-decoration: none; color: #030303;"
+               style="background:#f8069d;; padding: 15px 40px; font-size: 1.2rem; font-weight: 600; text-transform: uppercase; border-radius: 50px; box-shadow: 0 6px 15px rgba(248,6,217,0.5); transition: transform 0.3s ease, box-shadow 0.3s ease; text-decoration: none; color: #030303;"
                onmouseover="this.style.transform='translateY(-3px)'; this.style.boxShadow='0 8px 20px rgba(248,6,217,0.7);'" 
                onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 6px 15px rgba(248,6,217,0.5);'"
                aria-label="Know Now">Know More</a>
@@ -2921,8 +2802,7 @@ padding: 40px 0; /* Reduced from 100px 0 */        color: #fff;
         .section-title {
             text-align: center;
             font-size: 2rem;
-            color: #f806d9;
-            text-shadow: 0 0 15px rgba(248, 6, 217, 0.5);
+            color: #f8069d;
         }
 
         .learn-grid {
@@ -2983,7 +2863,7 @@ padding: 40px 0; /* Reduced from 100px 0 */        color: #fff;
             content: "✔";
             position: absolute;
             left: 0;
-            color: #f806d9;
+            color: #f8069d;
         }
 
         .feature-list li:last-child {
@@ -2992,7 +2872,7 @@ padding: 40px 0; /* Reduced from 100px 0 */        color: #fff;
 
         /* Button */
         .btn {
-            background-color: #f806d9;
+            background-color: #f8069d;
             color: #030303;
             padding: 0.8rem 1.6rem;
             border-radius: 30px;
@@ -3373,70 +3253,70 @@ padding: 40px 0; /* Reduced from 100px 0 */        color: #fff;
                 <h2 class="section-title fade-in" style="text-align:center;">From Students to Makeup Stars</h2>
                 <div class="video-grid-row">
                     <div class="video-card fade-in fade-in-delay-1 card-3d morph-3d float-3d">
-                        <iframe width="100%" height="250"
-                            src="https://www.youtube.com/embed/xrQ3BZgKS1Q?si=njdUCxB6MMbGWK6W"
-                            title="YouTube video player" frameborder="0" allowfullscreen></iframe>
+                       <iframe width="560" height="315" src="https://www.youtube.com/embed/ehHiVjgWIrI?si=U2N7nRFidfccHF5B" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                     </div>
                     <div class="video-card fade-in fade-in-delay-2 card-3d morph-3d float-3d">
-                        <iframe width="100%" height="250"
-                            src="https://www.youtube.com/embed/hx_mcv0YwI4?si=Iz6enUmNcK3RvIZ3"
-                            title="YouTube video player" frameborder="0" allowfullscreen></iframe>
+                       <iframe width="560" height="315" src="https://www.youtube.com/embed/5xg2F_NDccs?si=AYRm3kk6GLMRAkUP" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                     </div>
                     <div class="video-card fade-in fade-in-delay-3 card-3d morph-3d float-3d">
-                        <iframe width="100%" height="250"
-                            src="https://www.youtube.com/embed/p8ti-hW2N7o?si=aHP3qrGMULFbWUk3"
-                            title="YouTube video player" frameborder="0" allowfullscreen></iframe>
+                      <iframe width="560" height="315" src="https://www.youtube.com/embed/Y4DsOvFYYCY?si=wo1dg_Iz-dtiNJtW" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                     </div>
-                    <div class="video-card fade-in fade-in-delay-4 card-3d morph-3d float-3d">
+                    <!-- <div class="video-card fade-in fade-in-delay-4 card-3d morph-3d float-3d">
                         <iframe width="100%" height="250"
                             src="https://www.youtube.com/embed/2Pybc7zcjvU?si=AXr-D9zBhKA01rEQ"
                             title="YouTube video player" frameborder="0" allowfullscreen></iframe>
-                    </div>
+                    </div> -->
                 </div>
             </div>
         </div>
     </section>
 
-    <style>
-        .video-grid-row {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 2rem;
-            margin-top: 2rem;
-        }
+   <style>
+    .video-grid-row {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 2rem;
+        margin-top: 2rem;
+        justify-items: center;
+    }
 
-        .video-card {
-            background: #000;
-            border-radius: 10px;
-            overflow: hidden;
-            box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.3);
-        }
+    .video-card {
+        background: #000;
+        border-radius: 10px;
+        overflow: hidden;
+        box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.3);
+        width: 100%;
+        max-width: 560px;
+    }
 
-        @media (max-width: 1024px) {
-            .video-grid-row {
-                grid-template-columns: repeat(2, 1fr);
-            }
-        }
+    .video-card iframe {
+        width: 100%;
+        height: 315px;
+        display: block;
+    }
 
-        @media (max-width: 600px) {
-            .video-grid-row {
-                grid-template-columns: 1fr;
-            }
+    @media (max-width: 600px) {
+        .video-card iframe {
+            height: 200px;
         }
-    </style>
+    }
+</style>
+
 
     <!-- Section 10: Contact Form -->
     <section class="section gradient-bg section-bg-030303" id="contact"  
-    style="
-        background-image: url('banio8.jpg');
-        background-size: cover; 
-        background-position: center; 
+   style="
+        position: relative;
+        background: 
+            linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
+            url('dulhani.webp');
+        background-size: cover;       /* Fill full width */
+        background-position: center top; /* Keep important part visible */
         background-repeat: no-repeat;
-        background-color: rgba(255,255,255,0.25); /* light overlay */
-        background-blend-mode: lighten; /* blends overlay with image */
-        padding: 40px 0px; 
-        color: #fff; 
+        padding: 40px 0;
+        color: #fff;
         text-align: center;
+        backdrop-filter: blur(3px);
     "
 >
     <!-- your content here -->
@@ -3496,14 +3376,13 @@ padding: 40px 0; /* Reduced from 100px 0 */        color: #fff;
         /* Footer */
         .site-footer {
             width: 100%;
-            background: linear-gradient(90deg, #f806d9 0%, #ff0b84 100%);
+            background: #f8069d!important;
             /* main pink gradient */
             color: #ffffff;
             padding: 20px 0;
             text-align: center;
             border-top: 4px solid #030303;
             /* thin dark top border like your image */
-            box-shadow: inset 0 1px 0 rgba(0, 0, 0, 0.05);
             font-family: "Helvetica Neue", Arial, sans-serif;
             position: relative;
         }
