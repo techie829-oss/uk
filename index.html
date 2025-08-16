@@ -37,6 +37,47 @@
             overflow-x: hidden;
             perspective: 1000px;
         }
+/* Floating WhatsApp circle */
+.whatsapp-btn {
+    position: fixed;              /* Keep it fixed */
+    left: 20px;                   /* Distance from left */
+    bottom: 72px;                 /* Distance from bottom */
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    background: #25D366;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 6px 20px rgba(8, 8, 8, 0.25);
+    z-index: 9999;                /* Ensure it stays on top */
+    text-decoration: none;
+    transition: transform 0.12s ease, box-shadow 0.12s ease;
+}
+
+.whatsapp-btn:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 28px rgba(8, 8, 8, 0.3);
+}
+
+.whatsapp-btn svg {
+    display: block;
+}
+
+/* Responsive tweaks */
+@media (max-width:480px) {
+    .whatsapp-btn {
+        width: 48px;
+        height: 48px;
+        bottom: 64px;   /* Still fixed */
+        left: 14px;
+    }
+
+    .whatsapp-btn svg {
+        width: 20px;
+        height: 20px;
+    }
+}
 
         .achievements-section {
         padding: 20px 0;
@@ -3677,3 +3718,4 @@ padding: 40px 0; /* Reduced from 100px 0 */        color: #fff;
 </body>
 
 </html>
+
