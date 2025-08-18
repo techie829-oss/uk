@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+    <!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -15,8 +15,8 @@
         rel="stylesheet">
 
     <!-- Three.js CDN -->
-
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/controls/OrbitControls.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollToPlugin.min.js"></script>
 
@@ -24,6 +24,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
     <style>
+        
         * {
             margin: 0;
             padding: 0;
@@ -35,58 +36,11 @@
             background: #030303;
             color: #ffffff;
             overflow-x: hidden;
-
-        }
-
-        /* Floating WhatsApp circle */
-        .whatsapp-btn {
-            position: fixed;
-            /* Keep it fixed */
-            left: 20px;
-            /* Distance from left */
-            bottom: 72px;
-            /* Distance from bottom */
-            width: 56px;
-            height: 56px;
-            border-radius: 50%;
-            background: #25D366;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            box-shadow: 0 6px 20px rgba(8, 8, 8, 0.25);
-            z-index: 9999;
-            /* Ensure it stays on top */
-            text-decoration: none;
-            transition: transform 0.12s ease, box-shadow 0.12s ease;
-        }
-
-        .whatsapp-btn:hover {
-            transform: translateY(-4px);
-            box-shadow: 0 10px 28px rgba(8, 8, 8, 0.3);
-        }
-
-        .whatsapp-btn svg {
-            display: block;
-        }
-
-        /* Responsive tweaks */
-        @media (max-width:480px) {
-            .whatsapp-btn {
-                width: 48px;
-                height: 48px;
-                bottom: 64px;
-                /* Still fixed */
-                left: 14px;
-            }
-
-            .whatsapp-btn svg {
-                width: 20px;
-                height: 20px;
-            }
+            perspective: 1000px;
         }
 
         .achievements-section {
-            padding: 20px 0;
+        padding: 20px 0;
             text-align: center;
             background: black;
             color: white;
@@ -126,7 +80,8 @@
             width: 80px;
             height: 80px;
             background: #ffb4eb;
-            color: #f8069d border-radius: 50%;
+            color: #f8069d
+            border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -136,20 +91,20 @@
         }
 
         .achievement-text h3 {
-            font-size: 1.8rem;
+            font-size: 50px !important;
             font-weight: bold;
             color: #f8069d;
             margin: 0;
         }
 
         .achievement-text p {
-            font-size: 1rem;
+            font-size: 20px !important;
             color: rgba(255, 255, 255, 0.85);
             margin: 5px 0 0 0;
         }
 
         /* Animations */
-
+      
 
         #threejs-background {
             position: fixed;
@@ -232,45 +187,38 @@
         }
 
         .section {
-            padding: 40px 0;
-            /* Reduced from 100px 0 */
-            position: relative;
+padding: 40px 0; /* Reduced from 100px 0 */      
+      position: relative;
         }
-
         @media (max-width: 768px) {
-            .section {
-                padding: 25px 0;
-                /* Reduced from 50px 0 */
-            }
-        }
+    .section {
+        padding: 25px 0; /* Reduced from 50px 0 */
+    }
+}
 
-        @media (max-width: 600px) {
-            .section {
-                padding: 20px 0;
-                /* Reduced from 40px 0 */
-            }
-        }
+@media (max-width: 600px) {
+    .section {
+        padding: 20px 0; /* Reduced from 40px 0 */
+    }
+}
 
-        @media (max-width: 480px) {
-            .section {
-                padding: 15px 0;
-                /* Reduced from 25px 0 */
-            }
-        }
+@media (max-width: 480px) {
+    .section {
+        padding: 15px 0; /* Reduced from 25px 0 */
+    }
+}
 
-        @media (max-width: 360px) {
-            .section {
-                padding: 10px 0;
-                /* Reduced from 25px 0 */
-            }
-        }
+@media (max-width: 360px) {
+    .section {
+        padding: 10px 0; /* Reduced from 25px 0 */
+    }
+}
 
-        @media (max-width: 320px) {
-            .section {
-                padding: 8px 0;
-                /* Reduced from 25px 0 */
-            }
-        }
+@media (max-width: 320px) {
+    .section {
+        padding: 8px 0; /* Reduced from 25px 0 */
+    }
+}
 
         /* Alternating section backgrounds */
         .section-bg-1a1a1a {
@@ -359,16 +307,16 @@
 
         .hero-contact-form {
             background: #030303 !important;
-            border: 1px solid rgba(255, 74, 193, 0.3);
+                border: 1px solid rgba(255, 74, 193, 0.3);
             border-radius: 15px;
             padding: 2.5rem;
             position: relative;
             overflow: hidden;
         }
 
+      
 
-
-
+      
 
         .form-title {
             font-size: 1.8rem;
@@ -441,9 +389,10 @@
             animation: rotate3D 0.8s ease-in-out;
         }
 
-        .hero-title {}
+        .hero-title {
+        }
 
-
+       
         .card-3d {
             transform-style: preserve-3d;
             perspective: 1000px;
@@ -464,7 +413,7 @@
             transform: translateY(-4px) rotateX(8deg) rotateY(4deg) scale(1.08);
         }
 
-
+       
         .float-3d {
             animation: float3D 5s ease-in-out infinite;
         }
@@ -474,7 +423,7 @@
             transition: transform 0.2s ease-out;
         }
 
-
+       
 
         .glitch-3d:hover {
             animation: glitch3D 0.25s ease-in-out;
@@ -501,7 +450,8 @@
             transform: rotate(45deg) translateX(100%);
         }
 
-        =.btn-pulse {
+       =
+        .btn-pulse {
             animation: buttonPulse 2s ease-in-out infinite;
         }
 
@@ -513,7 +463,7 @@
             transform: translateY(-8px) rotateX(4deg) rotateY(4deg) scale(1.01);
         }
 
-
+       
         .text-glow-pulse {
             animation: textGlowPulse 2.5s ease-in-out infinite;
         }
@@ -723,8 +673,7 @@
             text-align: center;
             padding: 2.5rem 1.5rem;
             transition: all 0.4s ease;
-            min-width: 0;
-            /* Allow cards to shrink properly in grid */
+            min-width: 0; /* Allow cards to shrink properly in grid */
         }
 
         .career-card:hover {
@@ -875,7 +824,7 @@
         /* Achievements Section */
         .achievements-section {
             position: relative;
-            padding: 50px 0;
+        padding: 50px 0;
             background: none;
         }
 
@@ -1026,7 +975,6 @@
 
         /* Large screens - ensure 4 cards in a row */
         @media (min-width: 1201px) {
-
             .career-container,
             .who-for-grid {
                 grid-template-columns: repeat(4, 1fr);
@@ -1052,7 +1000,7 @@
             .achievements-grid {
                 grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
             }
-
+            
             /* Keep 4 cards in a row for career section */
             .career-container,
             .who-for-grid {
@@ -1263,17 +1211,6 @@
                 min-height: 48px;
             }
 
-            .whatsapp-btn {
-                width: 50px;
-                height: 50px;
-                bottom: 70px;
-                left: 15px;
-            }
-
-            .whatsapp-btn svg {
-                width: 22px;
-                height: 22px;
-            }
         }
 
         @media (max-width: 600px) {
@@ -1625,17 +1562,6 @@
                 height: 45px;
             }
 
-            .whatsapp-btn {
-                width: 45px;
-                height: 45px;
-                bottom: 65px;
-                left: 12px;
-            }
-
-            .whatsapp-btn svg {
-                width: 20px;
-                height: 20px;
-            }
 
             .site-footer {
                 padding: 12px 0;
@@ -1755,17 +1681,7 @@
                 height: 25px;
             }
 
-            .whatsapp-btn {
-                width: 40px;
-                height: 40px;
-                bottom: 60px;
-                left: 10px;
-            }
-
-            .whatsapp-btn svg {
-                width: 18px;
-                height: 18px;
-            }
+           
         }
 
         /* Landscape orientation adjustments for mobile */
@@ -1803,7 +1719,7 @@
                 grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
                 gap: 1.5rem;
             }
-
+            
             .who-for-grid {
                 grid-template-columns: repeat(4, 1fr);
                 gap: 1.5rem;
@@ -1823,7 +1739,6 @@
         @media print {
 
             .header,
-            .whatsapp-btn,
             .floating-particles,
             #threejs-background {
                 display: none !important;
@@ -1863,7 +1778,7 @@
             background: #f8069d;
         }
 
-
+       
 
         /* Additional responsive improvements */
         .swiper {
@@ -2082,7 +1997,7 @@
                 grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
                 gap: 10px;
             }
-
+            
             .who-for-grid {
                 grid-template-columns: repeat(4, 1fr);
                 gap: 10px;
@@ -2275,10 +2190,6 @@
                 font-size: 9px;
             }
         }
-
-        .page-3d-root {
-            perspective: 1000px;
-        }
     </style>
 </head>
 
@@ -2308,169 +2219,208 @@
         </div>
     </header>
 
-    <style>
-        .hero {
-            min-height: 100vh;
-            display: flex;
-            align-items: center;
-            padding: 80px 0;
-            position: relative;
-            overflow: hidden;
-        }
+  <style>
+.hero {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    padding: 80px 0;
+    position: relative;
+    overflow: hidden;
+}
 
-        .hero-slide {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-size: cover;
-            background-position: top center;
-            /* align top instead of center */
-            opacity: 0;
-            transition: opacity 1s ease-in-out;
-        }
+.hero-slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+      background-size: cover;
+    background-position: top center; /* align top instead of center */
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
 
-        .hero-slide.active {
-            opacity: 1;
-        }
+.hero-slide.active {
+    opacity: 1;
+}
+.section-title,
+.hero-title,
+.hero-subtitle,
+.training-heading,
+.achievement-text h3,
+.career-card h3,
+.who-card h3,
+.why-choose h3,
+.form-title {
+    color: #f8069d !important;
+    background: none !important;
+    -webkit-background-clip: initial !important;
+    -webkit-text-fill-color: initial !important;
+    text-shadow: none !important;
+    animation: none !important;
+    transform: none !important;
+    font-weight: bold !important;
+    letter-spacing: normal !important;
+    text-transform: none !important;
+}
+/* Mobile adjustments */
+/* Mobile adjustments */
+@media (max-width: 768px) {
+    .hero-content{
+        padding:10px !important
+    }
+    .hero-slide {
+        background-position: center center; /* keep main subject centered */
+        background-size: contain; /* show full image */
+        background-repeat: no-repeat;
+        height: auto; /* adjust height naturally */
+        min-height: 390px; /* ensures it’s still visible */
+    }
 
-        .section-title,
-        .hero-title,
-        .hero-subtitle,
-        .training-heading,
-        .achievement-text h3,
-        .career-card h3,
-        .who-card h3,
-        .why-choose h3,
-        .form-title {
-            color: #f8069d !important;
-            background: none !important;
-            -webkit-background-clip: initial !important;
-            -webkit-text-fill-color: initial !important;
-            text-shadow: none !important;
-            animation: none !important;
-            transform: none !important;
-            font-weight: bold !important;
-            letter-spacing: normal !important;
-            text-transform: none !important;
-        }
+    .hero-title {
+        font-size: 1.3rem; /* scale down title */
+        line-height: 1.3;
+    }
 
-        /* Mobile adjustments */
-        /* Mobile adjustments */
-        @media (max-width: 768px) {
-            .hero-content {
-                padding: 10px !important
-            }
-
-            .hero-slide {
-                background-position: center center;
-                /* keep main subject centered */
-                background-size: contain;
-                /* show full image */
-                background-repeat: no-repeat;
-                height: auto;
-                /* adjust height naturally */
-                min-height: 390px;
-                /* ensures it’s still visible */
-            }
-
-            .hero-title {
-                font-size: 1.3rem;
-                /* scale down title */
-                line-height: 1.3;
-            }
-
-            .hero-subtitle {
-                font-weight: bold;
-                /* make tagline bold */
-                font-size: 1rem;
-            }
-        }
+    .hero-subtitle {
+        font-weight: bold; /* make tagline bold */
+        font-size: 1rem;
+    }
+}
 
 
 
-        .page-3d-root {
-            perspective: 1000px;
-        }
-    </style>
+</style>
 
-    <!-- Section 1: Hero Banner -->
-    <section class="section hero gradient-bg section-bg-1a1a1a">
-        <!-- Slider Backgrounds -->
-        <div class="hero-slide active" style="background-image: url('b.png');"></div>
-        <div class="hero-slide" style="background-image: url('banner.jpg');"></div>
-
-        <div class="container">
-            <div class="hero-content" style="padding-top: 60px; position: relative; z-index: 2;">
-                <div class="hero-text">
-                    <h2 class="hero-title">Master the Art of Professional Makeup!</h2>
-                    <h1 class="hero-subtitle fade-in fade-in-delay-1 parallax-3d" style="font-weight:bold;">
-                        Join the Best Makeup Course at UK International
-                    </h1>
-
-                    <p class="hero-description fade-in fade-in-delay-2">
-                        Learn professional makeup at UK International with hands-on training and global certification.
-                    </p>
-                </div>
-
-                <div class="hero-form-container">
-                    <div class="hero-contact-form"
-                        style="padding: 20px; border-radius: 12px; background: #1a1a1a; /* Removed gradient */">
-                        <h3 class="form-title"
-                            style="font-size: 1.4rem; margin-bottom: 15px; color: #f8069d; text-align: center; /* Removed effects */">
-                            Get Started Today!
-                        </h3>
-                        <form>
-                            <div class="form-group" style="margin-bottom: 12px;">
-                                <input type="text" placeholder="Your Name" required aria-label="Your Name"
-                                    style="padding: 10px 14px; font-size: 0.95rem; width: 100%; border-radius: 8px; border: 1px solid #444; background: #121212; color: #fff; /* Removed transition */">
-                            </div>
-                            <div class="form-group" style="margin-bottom: 12px;">
-                                <input type="email" placeholder="Your Email" required aria-label="Your Email"
-                                    style="padding: 10px 14px; font-size: 0.95rem; width: 100%; border-radius: 8px; border: 1px solid #444; background: #121212; color: #fff; /* Removed transition */">
-                            </div>
-                            <div class="form-group" style="margin-bottom: 12px;">
-                                <input type="tel" placeholder="Your Phone Number" required
-                                    aria-label="Your Phone Number"
-                                    style="padding: 10px 14px; font-size: 0.95rem; width: 100%; border-radius: 8px; border: 1px solid #444; background: #121212; color: #fff; /* Removed transition */">
-                            </div>
-                            <div class="form-group" style="margin-bottom: 12px;">
-                                <input type="text" placeholder="Course Name" required aria-label="Course Name"
-                                    style="padding: 10px 14px; font-size: 0.95rem; width: 100%; border-radius: 8px; border: 1px solid #444; background: #121212; color: #fff; /* Removed transition */">
-                            </div>
-                            <div class="form-group" style="margin-bottom: 12px;">
-                                <textarea rows="4" placeholder="Your Message" required aria-label="Your Message"
-                                    style="padding: 10px 14px; font-size: 0.95rem; width: 100%; border-radius: 8px; border: 1px solid #444; background: #121212; color: #fff; min-height: 80px; /* Removed transition */"></textarea>
-                            </div>
-                            <button type="submit" aria-label="Enroll Now"
-                                style="width: 100%; padding: 12px 20px; border: none; border-radius: 50px; background: #f8069d; color: #fff; font-size: 1rem; font-weight: 600; cursor: pointer; /* Removed shadow and transition */">
-                                Enroll Now – Transform Your Passion into Profession!
-                            </button>
-                        </form>
-                    </div>
-                </div>
-            </div>
+<!-- Section 1: Hero Banner -->
+<section style="background:linear-gradient(135deg,#000 70%,#111); position:relative; width:100%; min-height:100vh; display:flex; align-items:center; justify-content:center; padding:40px 20px; box-sizing:border-box; overflow:hidden; flex-wrap:wrap;padding-top:90px !important">
+    
+    <!-- Left Content -->
+    <div class="left-content" style="flex:1; color:#fff; padding:20px; max-width:35%;">
+        <h4 style="font-size:29px; font-weight:600; margin-bottom:10px; color:#fff;">
+            Master the Art of Professional Makeup!
+        </h4>
+        <h1 style="font-size:40px; font-weight:900; margin-bottom:20px; line-height:1.2; background:linear-gradient(90deg,#f8069d,#ff3cac); -webkit-background-clip:text; color:transparent;">
+            Join the Best Makeup Course at UK International
+        </h1>
+        
+        <!-- Buttons -->
+        <div class="btn-box" style="display:flex; gap:15px; margin-top:30px; flex-wrap:wrap;">
+            <a href="tel:+918181814007" class="btn-call" style="flex:1; text-align:center; padding:14px 20px; border:2px solid #f8069d; border-radius:50px; font-size:16px; font-weight:600; color:#f8069d; text-decoration:none; display:flex; align-items:center; justify-content:center; gap:8px; transition:0.3s;">
+                📞 CALL NOW
+            </a>
+            <a href="https://wa.me/918181814007" class="btn-wa" style="flex:1; text-align:center; padding:14px 20px; border:2px solid #25D366; border-radius:50px; font-size:16px; font-weight:600; color:#25D366; text-decoration:none; display:flex; align-items:center; justify-content:center; gap:8px; transition:0.3s;">
+                💬 WHATSAPP
+            </a>
         </div>
-    </section>
+    </div>
 
-    <script>
-        let currentSlide = 0;
-        const slides = document.querySelectorAll('.hero-slide');
+    <!-- Center Image -->
+    <div class="center-image" style="flex:1; display:flex; justify-content:center; align-items:center; position:relative; max-width:30%; margin:20px 0;">
+        <div class="image-wrap" style="position:relative; width:300px; height:300px; border-radius:50%; overflow:hidden; border:6px solid #fff; box-shadow:0 0 25px rgba(248,6,157,0.4);">
+            <img src="banioo.jpg" alt="Model" style="width:100%; height:100%; object-fit:cover; border-radius:50%;">
+            
+            <!-- Pink Design Elements -->
+            <div style="position:absolute; top:-20px; right:-30px; width:100px; height:60px; background:#f8069d; border-radius:50px; z-index:-1; filter:blur(2px);"></div>
+            <div style="position:absolute; bottom:-20px; left:-30px; width:80px; height:80px; background:#f8069d; border-radius:50%; z-index:-1; filter:blur(2px);"></div>
+            <div class="dotted-circle" style="position:absolute; top:-15px; left:-15px; border:3px dotted #fff; width:100%; height:100%; border-radius:50%;"></div>
+        </div>
+    </div>
 
-        setInterval(() => {
-            slides[currentSlide].classList.remove('active');
-            currentSlide = (currentSlide + 1) % slides.length;
-            slides[currentSlide].classList.add('active');
-        }, 4000); // change every 4 seconds
-    </script>
+    <!-- Right Form -->
+    <div class="right-form" style="flex:1; padding:20px; max-width:35%;">
+        <div style="background:rgba(26,26,26,0.6); padding:30px; border-radius:20px; color:#fff; box-shadow:0 8px 25px rgba(0,0,0,0.5); backdrop-filter:blur(8px);">
+            <h3 style="text-align:center; font-size:24px; color:#f8069d; margin-bottom:20px; font-weight:700;">Get An Enquiry</h3>
+            <form>
+                <input type="text" placeholder="Enter Name" style="width:100%; padding:14px; margin-bottom:14px; border:1px solid #f8069d; border-radius:10px; background:#000; color:#fff; font-size:15px;">
+                <input type="email" placeholder="Enter Email" style="width:100%; padding:14px; margin-bottom:14px; border:1px solid #f8069d; border-radius:10px; background:#000; color:#fff; font-size:15px;">
+                <input type="tel" placeholder="Enter Phone" style="width:100%; padding:14px; margin-bottom:14px; border:1px solid #f8069d; border-radius:10px; background:#000; color:#fff; font-size:15px;">
+                <input type="text" placeholder="Course Name" style="width:100%; padding:14px; margin-bottom:14px; border:1px solid #f8069d; border-radius:10px; background:#000; color:#fff; font-size:15px;">
+                <input type="text" placeholder="Enter Requirement" style="width:100%; padding:14px; margin-bottom:14px; border:1px solid #f8069d; border-radius:10px; background:#000; color:#fff; font-size:15px;">
+                <button type="submit" style="width:100%; padding:14px; border:none; border-radius:50px; background:linear-gradient(90deg,#f8069d,#ff3cac); color:#fff; font-size:16px; font-weight:700; cursor:pointer; transition:0.3s;">SUBMIT NOW</button>
+            </form>
+        </div>
+    </div>
+</section>
+
+<!-- Responsive CSS -->
+<style>
+/* Glow on hover */
+.btn-call:hover {
+    background:#f8069d;
+    color:#fff !important;
+    box-shadow:0 0 15px #f8069d;
+}
+.btn-wa:hover {
+    background:#25D366;
+    color:#fff !important;
+    box-shadow:0 0 15px #25D366;
+}
+button:hover {
+    box-shadow:0 0 20px rgba(248,6,157,0.6);
+    transform:translateY(-2px);
+}
+
+/* Animate dotted circle */
+@keyframes spin {
+    0% {transform:rotate(0deg);}
+    100% {transform:rotate(360deg);}
+}
+.dotted-circle { animation:spin 12s linear infinite; }
+
+/* Tablet & Mobile Fix */
+@media (max-width: 992px) {
+    .left-content, .center-image, .right-form {
+        max-width: 100% !important;
+        flex: 100% !important;
+        text-align: center;
+    }
+    .btn-box {
+        flex-direction: column;
+        gap:12px;
+    }
+    .btn-call, .btn-wa {
+        width:100%;
+    }
+    .center-image .image-wrap {
+        width:220px !important;
+        height:220px !important;
+    }
+    .left-content h1 { font-size:28px !important; }
+    .left-content h4 { font-size:20px !important; }
+}
+
+/* Small Phones */
+@media (max-width: 576px) {
+    .left-content h1 { font-size:22px !important; }
+    .left-content h4 { font-size:18px !important; }
+    .center-image .image-wrap {
+        width:180px !important;
+        height:180px !important;
+    }
+}
+</style>
+
+
+
+<script>
+let currentSlide = 0;
+const slides = document.querySelectorAll('.hero-slide');
+
+setInterval(() => {
+    slides[currentSlide].classList.remove('active');
+    currentSlide = (currentSlide + 1) % slides.length;
+    slides[currentSlide].classList.add('active');
+}, 4000); // change every 4 seconds
+</script>
 
     <!-- Section 2: Career Start -->
-    <section class="career-section section-bg-030303" style="
+    <section class="career-section section-bg-030303" 
+     style="
         position: relative;
-        background:
-            linear-gradient(rgba(0, 0, 0, 0.62), rgba(0,0,0,0.6)),
-            url('bani3.jpeg');
+               background: linear-gradient(135deg, #6a004e, #000000); /* gradient only */
+
         background-size: cover;       /* Fill full width */
         background-position: center top; /* Keep important part visible */
         background-repeat: no-repeat;
@@ -2478,7 +2428,8 @@
         color: #fff;
         text-align: center;
         backdrop-filter: blur(3px);
-    ">
+    "
+>
         <div class="container">
             <div class="section-header fade-in">
                 <h2 class="section-title" style="color:#f8069d !important">Start a Successful Career in Makeup</h2>
@@ -2535,58 +2486,43 @@
                     object-fit: cover;
                     border-radius: 10px;
                 }
+              
+@media (max-width: 768px) {
+    .course-image {
+        display: flex;
+        flex-direction: column; /* Stack vertically */
+        height: auto;
+        overflow: hidden;
+        gap: 20px; /* Adds space between images */
+        margin: 0;
+        padding: 0;
+    }
 
-                @media (max-width: 768px) {
-                    .course-image {
-                        display: flex;
-                        flex-direction: column;
-                        /* Stack vertically */
-                        height: auto;
-                        overflow: hidden;
-                        gap: 20px;
-                        /* Adds space between images */
-                        margin: 0;
-                        padding: 0;
-                    }
+    .course-image img {
+        width: 100%; /* Full width image */
+        height: auto; /* Keep aspect ratio */
+        object-fit: cover; /* Fill width nicely */
+        display: block;
+        border-radius: 10px; /* Optional: rounded corners */
+    }
+}
 
-                    .course-image img {
-                        width: 100%;
-                        /* Full width image */
-                        height: auto;
-                        /* Keep aspect ratio */
-                        object-fit: cover;
-                        /* Fill width nicely */
-                        display: block;
-                        border-radius: 10px;
-                        /* Optional: rounded corners */
-                    }
-                }
-
-                .page-3d-root {
-                    perspective: 1000px;
-                }
             </style>
 
-            <div class="course-image">
+           <div class="course-image">
                 <img src="about2.jpg" alt="Makeup Model 1">
                 <img src="about1.avif" alt="Makeup Model 2">
-
+               
             </div>
 
             <div class="section-content">
                 <h2 class="section-title">MAKEUP COURSE AT UK INTERNATIONAL</h2>
                 <p>
-                    At UK International, our makeup course is perfect for anyone dreaming of a successful career in the
-                    beauty industry. Whether you are starting fresh or upgrading your skills, this makeup artist course
-                    will guide you step-by-step and help you become a certified professional.<br><br>
+                 At UK International, our makeup course is perfect for anyone dreaming of a successful career in the beauty industry. Whether you are starting fresh or upgrading your skills, this makeup artist course will guide you step-by-step and help you become a certified professional.<br><br>
 
-                    From the first day, you’ll get hands-on training in all key areas—skin preparation, base setting,
-                    eye makeup, contouring, bridal makeup course techniques, party looks, and editorial styles. Unlike
-                    ordinary makeup classes, we focus on real-time practice, live demonstrations, and one-on-one
-                    mentorship.<br><br>
+From the first day, you’ll get hands-on training in all key areas—skin preparation, base setting, eye makeup, contouring, bridal makeup course techniques, party looks, and editorial styles. Unlike ordinary makeup classes, we focus on real-time practice, live demonstrations, and one-on-one mentorship.<br><br>
 
-                    Recognized as one of the best makeup academy programs, our beauty makeup course is designed to make
-                    you confident, skilled, and job-ready by the end of your training.
+Recognized as one of the best makeup academy programs, our beauty makeup course is designed to make you confident, skilled, and job-ready by the end of your training.
                 </p>
                 <h3 class="training-heading">Get Hands-On Training In:</h3>
                 <ul class="training-list">
@@ -2600,7 +2536,7 @@
                     <li>Film, fashion and glamour makeup</li>
                 </ul>
                 <div class="btn-group">
-                    <a href="#contact" class="btn" aria-label="Request a Free Demo Class">REQUEST A FREE DEMO CLASS</a>
+                    <a href="#contact" class="btn" aria-label="Request a Free Demo Class">Enroll no</a>
                 </div>
 
             </div>
@@ -2611,7 +2547,11 @@
     <!-- Font Awesome for icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
-    <section class="achievements-section section-bg-030303">
+    <section class="achievements-section section-bg-030303" style="
+        background: linear-gradient(135deg, #6a004e, #000000); /* gradient only */
+       
+    "
+>
         <div class="container">
             <h2 class="section-title">Achievements and Recognition</h2>
             <div class="achievements-grid">
@@ -2654,71 +2594,66 @@
 
 
     <!-- Section 5: Who Is This Course For -->
-    <section class="who-for-section section-bg-1a1a1a" style="
+<section 
+    class="who-for-section section-bg-1a1a1a" 
+    style="
         background-image: url('banio8.jpg');
-        background-size: cover;
-        background-position: center;
+        background-size: cover; 
+        background-position: center; 
         background-repeat: no-repeat;
-padding: 40px 0; /* Reduced from 100px 0 */        color: #fff;
+padding: 40px 0; /* Reduced from 100px 0 */        color: #fff; 
         text-align: center;
-    ">
-        <div class="container">
-            <h2 class="section-title"
-                style="font-size: 2.8rem; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 40px; color: #f8069d;">
-                Who Is This Course For?
-            </h2>
-            <div class="who-for-grid fade-in fade-in-delay-1"
-                style="display: flex; gap: 25px; flex-wrap: wrap; justify-content: center;">
-                <div class="who-card"
-                    style="background: linear-gradient(145deg, #030303, #1a1a1a); color: #f8069d; border-radius: 50% 50% 0 0; padding: 25px; width: 240px; text-align: center; box-shadow: 0 8px 20px rgba(3,3,3,0.5); transition: transform 0.3s ease, box-shadow 0.3s ease; transform: perspective(500px) translateZ(0);">
-                    <div class="icon-circle" style="font-size: 48px; margin-bottom: 15px; color: #f8069d;">
-                        <i class="fas fa-seedling"></i>
-                    </div>
-                    <h3 style="font-size: 1.5rem; font-weight: 600; margin-bottom: 10px; color: #f8069d;">Beginners</h3>
-                    <p style="font-size: 1rem; line-height: 1.5; color: white;">No or basic makeup knowledge? This
-                        course is your perfect start.</p>
+    "
+>     
+    <div class="container">
+        <h2 class="section-title" style="font-size: 2.8rem; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 40px; color: #f8069d;">
+             Who Is This Course For?
+        </h2>
+        <div class="who-for-grid fade-in fade-in-delay-1" style="display: flex; gap: 25px; flex-wrap: wrap; justify-content: center;">
+            <div class="who-card" style="background: linear-gradient(145deg, #030303, #1a1a1a); color: #f8069d; border-radius: 50% 50% 0 0; padding: 25px; width: 240px; text-align: center; box-shadow: 0 8px 20px rgba(3,3,3,0.5); transition: transform 0.3s ease, box-shadow 0.3s ease; transform: perspective(500px) translateZ(0);">
+                <div class="icon-circle" style="font-size: 48px; margin-bottom: 15px; color: #f8069d;">
+                    <i class="fas fa-seedling"></i>
                 </div>
-                <div class="who-card"
-                    style="background: linear-gradient(145deg, #030303, #1a1a1a); color: #f8069d; border-radius: 50% 50% 0 0; padding: 25px; width: 240px; text-align: center; box-shadow: 0 8px 20px rgba(3,3,3,0.5); transition: transform 0.3s ease, box-shadow 0.3s ease; transform: perspective(500px) translateZ(0);">
-                    <div class="icon-circle" style="font-size: 48px; margin-bottom: 15px; color: #f8069d; ">
-                        <i class="fas fa-user-graduate"></i>
-                    </div>
-                    <h3 style="font-size: 1.5rem; font-weight: 600; margin-bottom: 10px; color: #f8069d;">Students</h3>
-                    <p style="font-size: 1rem; line-height: 1.5; color: white;">Turn your creativity into a professional
-                        career.</p>
-                </div>
-                <div class="who-card"
-                    style="background: linear-gradient(145deg, #030303, #1a1a1a); color: #f8069d; border-radius: 50% 50% 0 0; padding: 25px; width: 240px; text-align: center; box-shadow: 0 8px 20px rgba(3,3,3,0.5); transition: transform 0.3s ease, box-shadow 0.3s ease; transform: perspective(500px) translateZ(0);">
-                    <div class="icon-circle" style="font-size: 48px; margin-bottom: 15px; color: #f8069d; ">
-                        <i class="fas fa-user-tie"></i>
-                    </div>
-                    <h3 style="font-size: 1.5rem; font-weight: 600; margin-bottom: 10px; color: #f8069d;">Freelancers
-                    </h3>
-                    <p style="font-size: 1rem; line-height: 1.5; color: white;">Upgrade your skills and attract more
-                        clients.</p>
-                </div>
-                <div class="who-card"
-                    style="background: linear-gradient(145deg, #030303, #1a1a1a); color: #f8069d; border-radius: 50% 50% 0 0; padding: 25px; width: 240px; text-align: center; box-shadow: 0 8px 20px rgba(3,3,3,0.5); transition: transform 0.3s ease, box-shadow 0.3s ease; transform: perspective(500px) translateZ(0);">
-                    <div class="icon-circle" style="font-size: 48px; margin-bottom: 15px; color: #f8069d;">
-                        <i class="fas fa-cut"></i>
-                    </div>
-                    <h3 style="font-size: 1.5rem; font-weight: 600; margin-bottom: 10px; color: #f8069d;">Professionals
-                    </h3>
-                    <p style="font-size: 1rem; line-height: 1.5; color: white;">Offer premium makeup services & grow
-                        your business.</p>
-                </div>
+                <h3 style="font-size: 1.5rem; font-weight: 600; margin-bottom: 10px; color: #f8069d;">Beginners</h3>
+                <p style="font-size: 1rem; line-height: 1.5; color: white;">No or basic makeup knowledge? This course is your perfect start.</p>
             </div>
-            <div style="text-align: center; margin-top: 2.5rem;">
-                <a href="#contact" class="btn btn-primary fade-in fade-in-delay-3 btn-3d btn-enhanced btn-pulse"
-                    style="background:#f8069d;; padding: 15px 40px; font-size: 1.2rem; font-weight: 600; text-transform: uppercase; border-radius: 50px; box-shadow: 0 6px 15px rgba(248,6,217,0.5); transition: transform 0.3s ease, box-shadow 0.3s ease; text-decoration: none; color: #030303;"
-                    onmouseover="this.style.transform='translateY(-3px)'; this.style.boxShadow='0 8px 20px rgba(248,6,217,0.7);'"
-                    onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 6px 15px rgba(248,6,217,0.5);'"
-                    aria-label="Know Now">Know More</a>
+            <div class="who-card" style="background: linear-gradient(145deg, #030303, #1a1a1a); color: #f8069d; border-radius: 50% 50% 0 0; padding: 25px; width: 240px; text-align: center; box-shadow: 0 8px 20px rgba(3,3,3,0.5); transition: transform 0.3s ease, box-shadow 0.3s ease; transform: perspective(500px) translateZ(0);">
+                <div class="icon-circle" style="font-size: 48px; margin-bottom: 15px; color: #f8069d; ">
+                    <i class="fas fa-user-graduate"></i>
+                </div>
+                <h3 style="font-size: 1.5rem; font-weight: 600; margin-bottom: 10px; color: #f8069d;">Students</h3>
+                <p style="font-size: 1rem; line-height: 1.5; color: white;">Turn your creativity into a professional career.</p>
+            </div>
+            <div class="who-card" style="background: linear-gradient(145deg, #030303, #1a1a1a); color: #f8069d; border-radius: 50% 50% 0 0; padding: 25px; width: 240px; text-align: center; box-shadow: 0 8px 20px rgba(3,3,3,0.5); transition: transform 0.3s ease, box-shadow 0.3s ease; transform: perspective(500px) translateZ(0);">
+                <div class="icon-circle" style="font-size: 48px; margin-bottom: 15px; color: #f8069d; ">
+                    <i class="fas fa-user-tie"></i>
+                </div>
+                <h3 style="font-size: 1.5rem; font-weight: 600; margin-bottom: 10px; color: #f8069d;">Freelancers</h3>
+                <p style="font-size: 1rem; line-height: 1.5; color: white;">Upgrade your skills and attract more clients.</p>
+            </div>
+            <div class="who-card" style="background: linear-gradient(145deg, #030303, #1a1a1a); color: #f8069d; border-radius: 50% 50% 0 0; padding: 25px; width: 240px; text-align: center; box-shadow: 0 8px 20px rgba(3,3,3,0.5); transition: transform 0.3s ease, box-shadow 0.3s ease; transform: perspective(500px) translateZ(0);">
+                <div class="icon-circle" style="font-size: 48px; margin-bottom: 15px; color: #f8069d;">
+                    <i class="fas fa-cut"></i>
+                </div>
+                <h3 style="font-size: 1.5rem; font-weight: 600; margin-bottom: 10px; color: #f8069d;">Professionals</h3>
+                <p style="font-size: 1rem; line-height: 1.5; color: white;">Offer premium makeup services & grow your business.</p>
             </div>
         </div>
-    </section>
+        <div style="text-align: center; margin-top: 2.5rem;">
+            <a href="#contact" class="btn btn-primary fade-in fade-in-delay-3 btn-3d btn-enhanced btn-pulse" 
+               style="background:#f8069d;; padding: 15px 40px; font-size: 1.2rem; font-weight: 600; text-transform: uppercase; border-radius: 50px; box-shadow: 0 6px 15px rgba(248,6,217,0.5); transition: transform 0.3s ease, box-shadow 0.3s ease; text-decoration: none; color: #030303;"
+               onmouseover="this.style.transform='translateY(-3px)'; this.style.boxShadow='0 8px 20px rgba(248,6,217,0.7);'" 
+               onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 6px 15px rgba(248,6,217,0.5);'"
+               aria-label="Know Now">Know More</a>
+        </div>
+    </div>
+</section>
     <!-- Section 6: What You'll Learn -->
-    <section class="section gradient-bg section-bg-030303">
+    <section class="section gradient-bg section-bg-030303" style="
+        background: linear-gradient(135deg, #6a004e, #000000); /* gradient only */
+       
+    "
+>
         <div class="container">
             <div class="section-content">
                 <h2 class="section-title fade-in">What You'll Learn</h2>
@@ -2794,19 +2729,16 @@ padding: 40px 0; /* Reduced from 100px 0 */        color: #fff;
             box-shadow: 0 12px 35px rgba(248, 6, 217, 0.5);
         }
 
-        .learn-image {
-            width: 100%;
-            overflow: hidden;
-        }
+.learn-image {
+    width: 100%;
+    overflow: hidden;
+}
 
-        .learn-image img {
-            width: 100%;
-            /* take full width of the box */
-            height: 450px;
-            /* keep aspect ratio */
-            display: block;
-            /* remove default inline gaps */
-        }
+.learn-image img {
+    width: 100%;     /* take full width of the box */
+    height: 450px;    /* keep aspect ratio */
+    display: block;  /* remove default inline gaps */
+}
 
 
 
@@ -2875,10 +2807,6 @@ padding: 40px 0; /* Reduced from 100px 0 */        color: #fff;
 
         .fade-up {
             animation: fadeUp 0.8s ease forwards;
-        }
-
-        .page-3d-root {
-            perspective: 1000px;
         }
     </style>
 
@@ -2960,145 +2888,224 @@ padding: 40px 0; /* Reduced from 100px 0 */        color: #fff;
         .swiper-button-prev {
             color: #ff4ac1;
         }
-
-        .page-3d-root {
-            perspective: 1000px;
-        }
     </style>
 
 
-    <section class="section gradient-bg section-bg-1a1a1a" style="
+   <section class="section gradient-bg section-bg-1a1a1a"  
+    style="
         background-image: url('banner2.jpg');
-        background-size: cover;
-        background-position: center;
+        background-size: cover; 
+        background-position: center; 
         background-repeat: no-repeat;
         padding: 10px 0;
-        color: #fff;
+        color: #fff; 
         text-align: center;
-    ">
-        <div class="container">
-            <div class="section-content">
-                <h2 class="section-title">PLACEMENT PARTNERS</h2>
-                <p class="section-subtitle">From Classroom to Global Career — expert training &amp; industry
-                    certification.</p>
+    "
+>   
+    <div class="container">
+        <div class="section-content">
+            <h2 class="section-title">PLACEMENT PARTNERS</h2>
+            <p class="section-subtitle">
+                From Classroom to Global Career — expert training &amp; industry certification.
+            </p>
 
-                <div class="card">
-                    <!-- Swiper -->
-                    <div class="swiper mySwiper">
-                        <div class="swiper-wrapper">
+            <div class="card">
+                <!-- Swiper -->
+                <div class="swiper mySwiper">
+                    <div class="swiper-wrapper">
 
-                            <!-- 6 slides so movement is obvious -->
-                            <div class="swiper-slide">
-                                <div class="partner-item">
-                                    <div class="partner-logo"><img src="lux.jpeg" alt=""></div>
-                                </div>
+                        <!-- Slides -->
+                        <div class="swiper-slide">
+                            <div class="partner-item">
+                                <div class="partner-logo"><img src="lux.jpeg" alt=""></div>
                             </div>
-                            <div class="swiper-slide">
-                                <div class="partner-item">
-                                    <div class="partner-logo"><img src="skin.png" alt=""></div>
-                                </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="partner-item">
+                                <div class="partner-logo"><img src="skin.png" alt=""></div>
                             </div>
-                            <div class="swiper-slide">
-                                <div class="partner-item">
-                                    <div class="partner-logo"><img src="coal.jpeg" alt=""></div>
-                                </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="partner-item">
+                                <div class="partner-logo"><img src="coal.jpeg" alt=""></div>
                             </div>
-                            <div class="swiper-slide">
-                                <div class="partner-item">
-                                    <div class="partner-logo"><img src="hair.jpeg" alt=""></div>
-                                </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="partner-item">
+                                <div class="partner-logo"><img src="hair.jpeg" alt=""></div>
                             </div>
-                            <div class="swiper-slide">
-                                <div class="partner-item">
-                                    <div class="partner-logo"><img src="bellavita.png" alt=""></div>
-                                </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="partner-item">
+                                <div class="partner-logo"><img src="bellavita.png" alt=""></div>
                             </div>
-                            <div class="swiper-slide">
-                                <div class="partner-item">
-                                    <div class="partner-logo"><img src="vibes.png" alt=""></div>
-                                </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="partner-item">
+                                <div class="partner-logo"><img src="vibes.png" alt=""></div>
                             </div>
-
                         </div>
 
-                        <!-- controls -->
-                        <div class="swiper-button-next"></div>
-                        <div class="swiper-button-prev"></div>
-                        <div class="swiper-pagination"></div>
                     </div>
+
+                    <!-- controls -->
+                    <div class="swiper-button-next"></div>
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-pagination"></div>
                 </div>
-
             </div>
+
         </div>
-    </section>
+    </div>
+</section>
 
-    <!-- Swiper JS (CDN) -->
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-    <script>
-        // Ensure DOM and Swiper script loaded
-        document.addEventListener('DOMContentLoaded', function () {
-            // Basic init - should work with the UMD bundle from CDN
-            const swiper = new Swiper('.mySwiper', {
-                slidesPerView: 1,
-                spaceBetween: 15,
-                loop: true,
-                autoplay: {
-                    delay: 3000,
-                    disableOnInteraction: false,
-                    pauseOnMouseEnter: true
-                },
-                navigation: {
-                    nextEl: '.swiper-button-next',
-                    prevEl: '.swiper-button-prev',
-                    enabled: true
-                },
-                pagination: {
-                    el: '.swiper-pagination',
-                    clickable: true,
-                    dynamicBullets: true
-                },
-                breakpoints: {
-                    0: {
-                        slidesPerView: 1,
-                        spaceBetween: 10,
-                        navigation: { enabled: false }
-                    },
-                    480: {
-                        slidesPerView: 2,
-                        spaceBetween: 15,
-                        navigation: { enabled: true }
-                    },
-                    768: {
-                        slidesPerView: 3,
-                        spaceBetween: 20,
-                        navigation: { enabled: true }
-                    },
-                    1024: {
-                        slidesPerView: 4,
-                        spaceBetween: 20,
-                        navigation: { enabled: true }
-                    }
-                },
-                // Touch-friendly settings
-                touchRatio: 1,
-                touchAngle: 45,
-                grabCursor: true,
-                // Performance optimizations
-                watchSlidesProgress: true,
-                watchSlidesVisibility: true
-            });
+<!-- Swiper CSS -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
 
-            // Pause autoplay on mobile for better UX
-            if (window.innerWidth <= 768) {
-                swiper.autoplay.stop();
-            }
+<style>
+/* Swiper wrapper full width */
+.swiper {
+  width: 100%;
+  padding: 20px 0;
+}
+
+/* Each slide */
+.swiper-slide {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Card (logo container) */
+.partner-item {
+  width: 100%;
+  max-width: 260px;   /* size of each slide */
+  height: 180px;      /* fixed height */
+  background: #000;
+  border: 2px solid #f8069d;
+  border-radius: 12px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Force logo to fully fill card */
+.partner-item img {
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover; /* fills whole box, may crop edges */
+  display: block;
+}
+
+.partner-logo {
+    width: 100%;
+  height: 100%;
+  border: 2px solid #f8069d;
+  border-radius: 12px;
+  overflow: hidden;
+  background: #000;     /* fallback if image has transparency */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.partner-logo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;    /* fills the whole box */
+  display: block;
+}
+
+/* Mobile */
+
+
+/* Controls */
+.swiper-button-next,
+.swiper-button-prev {
+  color: #f8069d;
+}
+.swiper-pagination-bullet-active {
+  background: #f8069d !important;
+}
+
+/* Mobile fixes */
+@media (max-width: 480px) {
+  .partner-item {
+    max-width: 90%;
+    aspect-ratio: 16/9;
+  }
+
+
+  .partner-logo {
+    width: 100%;
+  height: 100%;
+  border: 2px solid #f8069d;
+  border-radius: 12px;
+  overflow: hidden;
+  background: #000;     /* fallback if image has transparency */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.partner-logo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;    /* fills the whole box */
+  display: block;
+}
+}
+</style>
+
+
+<!-- Swiper JS -->
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        new Swiper('.mySwiper', {
+            slidesPerView: 1,
+            spaceBetween: 15,
+            loop: true,
+            autoplay: {
+                delay: 3000,
+                disableOnInteraction: false
+            },
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev'
+            },
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+                dynamicBullets: true
+            },
+            breakpoints: {
+                0: {
+                    slidesPerView: 1,
+                    spaceBetween: 10
+                },
+                480: {
+                    slidesPerView: 2,
+                    spaceBetween: 15
+                },
+                768: {
+                    slidesPerView: 3,
+                    spaceBetween: 20
+                },
+                1024: {
+                    slidesPerView: 4,
+                    spaceBetween: 20
+                }
+            },
+            grabCursor: true
         });
-    </script>
-
+    });
+</script>
 
 
     <!-- Section 8: Certification -->
-    <!-- <section class="cert-career-section">
+   <!-- <section class="cert-career-section">
     <div class="container">
         <div class="section-header">
             <h2>🎓 Certification & Career Support</h2>
@@ -3107,7 +3114,7 @@ padding: 40px 0; /* Reduced from 100px 0 */        color: #fff;
             <div class="text-content">
                 <p>
                     Earn an <strong>industry-recognized certificate</strong> that boosts your resume and credibility.
-                    Get complete career assistance — <strong>resume building</strong>, <strong>interview prep</strong>,
+                    Get complete career assistance — <strong>resume building</strong>, <strong>interview prep</strong>, 
                     <strong>LinkedIn optimization</strong>, job alerts, and placement support to help you land your dream role.
                 </p>
             </div>
@@ -3123,220 +3130,186 @@ padding: 40px 0; /* Reduced from 100px 0 */        color: #fff;
     </div>
 </section> -->
 
-    <style>
-        .cert-career-section {
-            background: #030303;
-            padding: 60px 20px;
-            color: #fff;
-            font-family: 'Poppins', sans-serif;
-        }
+<style>
+.cert-career-section {
+    background: #030303;
+    padding: 60px 20px;
+    color: #fff;
+    font-family: 'Poppins', sans-serif;
+}
 
-        .section-header {
-            text-align: center;
-            margin-bottom: 40px;
-        }
+.section-header {
+    text-align: center;
+    margin-bottom: 40px;
+}
 
-        .section-header h2 {
-            font-size: 2rem;
-            font-weight: 700;
-            background: #f8069d;
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            animation: fadeInDown 1s ease forwards;
-        }
+.section-header h2 {
+    font-size: 2rem;
+    font-weight: 700;
+    background: #f8069d;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: fadeInDown 1s ease forwards;
+}
 
-        .content-wrapper {
-            display: flex;
-            flex-wrap: wrap;
-            align-items: center;
-            gap: 40px;
-            max-width: 1100px;
-            margin: auto;
-        }
+.content-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 40px;
+    max-width: 1100px;
+    margin: auto;
+}
 
-        .text-content {
-            flex: 1;
-            min-width: 300px;
-            font-size: 1.1rem;
-            line-height: 1.8;
-            animation: fadeInLeft 1.2s ease forwards;
-        }
+.text-content {
+    flex: 1;
+    min-width: 300px;
+    font-size: 1.1rem;
+    line-height: 1.8;
+    animation: fadeInLeft 1.2s ease forwards;
+}
 
-        .text-content strong {
-            color: #ff4fd8;
-        }
+.text-content strong {
+    color: #ff4fd8;
+}
 
-        .image-content {
-            flex: 1;
-            min-width: 300px;
-            text-align: center;
-            animation: fadeInRight 1.2s ease forwards;
-        }
+.image-content {
+    flex: 1;
+    min-width: 300px;
+    text-align: center;
+    animation: fadeInRight 1.2s ease forwards;
+}
 
-        .image-content img {
-            max-width: 100%;
-            border-radius: 12px;
-            box-shadow: 0 6px 30px rgba(255, 79, 216, 0.4);
-            transition: transform 0.4s ease;
-        }
+.image-content img {
+    max-width: 100%;
+    border-radius: 12px;
+    box-shadow: 0 6px 30px rgba(255, 79, 216, 0.4);
+    transition: transform 0.4s ease;
+}
 
-        .image-content img:hover {
-            transform: scale(1.05);
-        }
+.image-content img:hover {
+    transform: scale(1.05);
+}
 
-        .btn-container {
-            text-align: center;
-            margin-top: 30px;
-        }
+.btn-container {
+    text-align: center;
+    margin-top: 30px;
+}
 
-        .btn-inquire {
-            display: inline-block;
-            background: linear-gradient(90deg, #ff4fd8, #ff92f4);
-            color: #fff;
-            padding: 14px 32px;
-            border-radius: 50px;
-            font-size: 1rem;
-            font-weight: 600;
-            text-decoration: none;
-            box-shadow: 0 4px 15px rgba(255, 79, 216, 0.4);
-            transition: all 0.3s ease;
-        }
+.btn-inquire {
+    display: inline-block;
+    background: linear-gradient(90deg, #ff4fd8, #ff92f4);
+    color: #fff;
+    padding: 14px 32px;
+    border-radius: 50px;
+    font-size: 1rem;
+    font-weight: 600;
+    text-decoration: none;
+    box-shadow: 0 4px 15px rgba(255, 79, 216, 0.4);
+    transition: all 0.3s ease;
+}
 
-        .btn-inquire:hover {
-            background: linear-gradient(90deg, #ff92f4, #ff4fd8);
-            transform: translateY(-3px);
-            box-shadow: 0 6px 20px rgba(255, 79, 216, 0.6);
-        }
+.btn-inquire:hover {
+    background: linear-gradient(90deg, #ff92f4, #ff4fd8);
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(255, 79, 216, 0.6);
+}
 
-        /* Animations */
-        @keyframes fadeInLeft {
-            from {
-                opacity: 0;
-                transform: translateX(-50px);
-            }
+/* Animations */
+@keyframes fadeInLeft {
+    from { opacity: 0; transform: translateX(-50px); }
+    to { opacity: 1; transform: translateX(0); }
+}
 
-            to {
-                opacity: 1;
-                transform: translateX(0);
-            }
-        }
+@keyframes fadeInRight {
+    from { opacity: 0; transform: translateX(50px); }
+    to { opacity: 1; transform: translateX(0); }
+}
 
-        @keyframes fadeInRight {
-            from {
-                opacity: 0;
-                transform: translateX(50px);
-            }
-
-            to {
-                opacity: 1;
-                transform: translateX(0);
-            }
-        }
-
-        @keyframes fadeInDown {
-            from {
-                opacity: 0;
-                transform: translateY(-30px);
-            }
-
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        .page-3d-root {
-            perspective: 1000px;
-        }
-    </style>
+@keyframes fadeInDown {
+    from { opacity: 0; transform: translateY(-30px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+</style>
 
     <!-- Section 9: Testimonials -->
-    <section class="section gradient-bg section-bg-1a1a1a" style="padding:50px 0px;">
-        <div class="container">
-            <div class="section-content">
-                <h2 class="section-title fade-in" style="text-align:center;">From Students to Makeup Stars</h2>
-                <div class="video-grid-row">
-                    <div class="video-card fade-in fade-in-delay-1 card-3d morph-3d float-3d">
-                        <iframe width="560" height="315"
-                            src="https://www.youtube.com/embed/ehHiVjgWIrI?si=U2N7nRFidfccHF5B"
-                            title="YouTube video player" frameborder="0"
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                    </div>
-                    <div class="video-card fade-in fade-in-delay-2 card-3d morph-3d float-3d">
-                        <iframe width="560" height="315"
-                            src="https://www.youtube.com/embed/5xg2F_NDccs?si=AYRm3kk6GLMRAkUP"
-                            title="YouTube video player" frameborder="0"
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                    </div>
-                    <div class="video-card fade-in fade-in-delay-3 card-3d morph-3d float-3d">
-                        <iframe width="560" height="315"
-                            src="https://www.youtube.com/embed/Y4DsOvFYYCY?si=wo1dg_Iz-dtiNJtW"
-                            title="YouTube video player" frameborder="0"
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                    </div>
-                    <!-- <div class="video-card fade-in fade-in-delay-4 card-3d morph-3d float-3d">
-                        <iframe width="100%" height="250"
-                            src="https://www.youtube.com/embed/2Pybc7zcjvU?si=AXr-D9zBhKA01rEQ"
-                            title="YouTube video player" frameborder="0" allowfullscreen></iframe>
-                    </div> -->
+   <section class="section gradient-bg section-bg-1a1a1a"  
+    style="background: linear-gradient(135deg, #f8069d, #000000);">
+    <div class="container">
+        <div class="section-content">
+            <h2 class="section-title fade-in" style="text-align:center;">
+                From Students to Makeup Stars
+            </h2>
+
+            <div class="video-grid-row">
+                <div class="video-card fade-in fade-in-delay-1 card-3d morph-3d float-3d">
+                    <iframe src="https://www.youtube.com/embed/ehHiVjgWIrI?si=U2N7nRFidfccHF5B" 
+                        title="YouTube video player" frameborder="0" 
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                        allowfullscreen></iframe>
+                </div>
+                <div class="video-card fade-in fade-in-delay-2 card-3d morph-3d float-3d">
+                    <iframe src="https://www.youtube.com/embed/5xg2F_NDccs?si=AYRm3kk6GLMRAkUP" 
+                        title="YouTube video player" frameborder="0" 
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                        allowfullscreen></iframe>
+                </div>
+                <div class="video-card fade-in fade-in-delay-3 card-3d morph-3d float-3d">
+                    <iframe src="https://www.youtube.com/embed/Y4DsOvFYYCY?si=wo1dg_Iz-dtiNJtW" 
+                        title="YouTube video player" frameborder="0" 
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                        allowfullscreen></iframe>
                 </div>
             </div>
         </div>
-    </section>
+    </div>
+</section>
 
-    <style>
-        .video-grid-row {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-            margin-top: 2rem;
-            justify-items: center;
-        }
+<style>
+/* Grid for video layout */
+.video-grid-row {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+    margin-top: 2rem;
+    justify-items: center;
+}
 
-        .video-card {
-            background: #000;
-            border-radius: 10px;
-            overflow: hidden;
-            box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.3);
-            width: 100%;
-            max-width: 560px;
-        }
+/* Each video card */
+.video-card {
+    background: #000;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.3);
+    width: 100%;
+    max-width: 560px;
 
-        .video-card iframe {
-            width: 100%;
-            height: 315px;
-            display: block;
-        }
+    border: 3px solid #f8069d;  /* 🔥 pink border */
+}
 
-        @media (max-width: 600px) {
-            .video-card iframe {
-                height: 200px;
-            }
-        }
 
-        @media (max-width: 768px) {
-            .responsive-bg {
-                background-position: center top;
-                /* Show more top on mobile */
-                min-height: 250px;
-                /* Adjust height for mobile */
-                padding: 20px 10px;
-            }
-        }
+/* Make iframe responsive */
+.video-card iframe {
+    width: 100%;
+    aspect-ratio: 16 / 9;  /* keeps proper video ratio */
+    display: block;
+    border: none;
+}
 
-        .page-3d-root {
-            perspective: 1000px;
-        }
-    </style>
+/* Smaller height on mobile */
+@media (max-width: 600px) {
+    .video-card iframe {
+        aspect-ratio: 16 / 9;
+    }
+}
+</style>
 
 
     <!-- Section 10: Contact Form -->
-    <section class="responsive-bg section gradient-bg section-bg-030303" id="contact" style="
+    <section class="responsive-bg section gradient-bg section-bg-030303" id="contact"  
+   style="
         position: relative;
-        background:
+        background: 
             linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
             url('dulhani.webp');
         background-size: cover;       /* Fill full width */
@@ -3346,8 +3319,9 @@ padding: 40px 0; /* Reduced from 100px 0 */        color: #fff;
         color: #fff;
         text-align: center;
         backdrop-filter: blur(3px);
-    ">
-        <!-- your content here -->
+    "
+>
+    <!-- your content here -->
 
         <div class="container">
             <div class="section-content">
@@ -3389,22 +3363,19 @@ padding: 40px 0; /* Reduced from 100px 0 */        color: #fff;
     </footer>
 
     <!-- Floating WhatsApp button -->
-    <a class="whatsapp-btn" href="https://wa.me/918181814007" target="_blank" aria-label="Chat on WhatsApp">
-        <!-- white WhatsApp SVG icon -->
-        <svg width="26" height="26" viewBox="0 0 24 24" fill="none" aria-hidden="true"
-            xmlns="http://www.w3.org/2000/svg">
-            <path fill="#fff"
-                d="M20.52 3.48A11.93 11.93 0 0012 0C5.373 0 .001 5.373.001 12c0 2.115.551 4.095 1.596 5.863L0 24l6.364-1.669A11.943 11.943 0 0012 24c6.627 0 12-5.373 12-12 0-3.2-1.247-6.164-3.48-8.52zM12 21.8c-1.86 0-3.68-.5-5.24-1.44l-.38-.22-3.78.99.99-3.69-.24-.39A9.81 9.81 0 012.2 12c0-5.43 4.41-9.8 9.8-9.8 2.62 0 5.08 1.02 6.93 2.88A9.742 9.742 0 0121.8 12c0 5.39-4.38 9.8-9.8 9.8z" />
-            <path fill="#fff"
-                d="M17.53 14.06c-.28-.14-1.63-.8-1.88-.89-.25-.09-.43-.14-.61.14-.18.28-.7.89-.86 1.07-.16.18-.32.2-.59.07-.27-.14-1.14-.42-2.17-1.33-.8-.72-1.34-1.62-1.5-1.89-.16-.28-.02-.43.12-.56.12-.12.27-.32.41-.49.14-.18.18-.3.27-.5.09-.18.05-.37-.02-.52-.07-.14-.61-1.5-.84-2.07-.22-.55-.45-.47-.61-.48l-.52-.01c-.18 0-.47.07-.72.35-.25.27-.97.95-.97 2.33 0 1.37.99 2.69 1.13 2.88.14.18 1.96 3 4.75 4.2 2.79 1.2 2.79.8 3.29.75.5-.05 1.62-.66 1.85-1.3.23-.64.23-1.19.16-1.3-.07-.12-.25-.17-.53-.31z" />
-        </svg>
-    </a>
+<!-- Footer -->
+
+
+<!-- WhatsApp Button -->
+<a href="https://wa.me/918181814007" target="_blank" aria-label="Chat on WhatsApp" class="whatsapp-fixed" style="position: fixed !important; bottom: 20px; left: 20px; width: 60px; height: 60px; border-radius: 50%; background: #25D366; display: flex; align-items: center; justify-content: center; box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3); z-index: 100000; text-decoration: none; cursor: pointer; transition: transform 0.2s ease, box-shadow 0.2s ease; -webkit-transform: translateZ(0); transform: translateZ(0); will-change: transform;" onmouseover="this.style.transform='translateY(-4px) scale(1.05) translateZ(0)'; this.style.boxShadow='0 10px 28px rgba(0, 0, 0, 0.4)';" onmouseout="this.style.transform='translateY(0) scale(1) translateZ(0)'; this.style.boxShadow='0 6px 20px rgba(0, 0, 0, 0.3)';">
+    <i class="fab fa-whatsapp" style="font-size: 28px; color: #fff;"></i>
+</a>
 
     <style>
         /* Footer */
         .site-footer {
             width: 100%;
-            background: #f8069d !important;
+            background: #f8069d!important;
             /* main pink gradient */
             color: #ffffff;
             padding: 20px 0;
@@ -3428,32 +3399,10 @@ padding: 40px 0; /* Reduced from 100px 0 */        color: #fff;
             display: inline-block;
         }
 
-
-
-        /* responsive tweaks */
-        @media (max-width:480px) {
-            .site-footer small {
-                font-size: 13px;
-            }
-
-            .whatsapp-btn {
-                width: 48px;
-                height: 48px;
-                bottom: 64px;
-                left: 14px;
-            }
-
-            .whatsapp-btn svg {
-                width: 20px;
-                height: 20px;
-            }
-        }
-
-        .page-3d-root {
-            perspective: 1000px;
-        }
+        /* Floating WhatsApp circle */
+   
     </style>
-
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
 
     <script>
         let scene, camera, renderer, particles, particleSystem;
@@ -3799,8 +3748,7 @@ padding: 40px 0; /* Reduced from 100px 0 */        color: #fff;
             });
         });
     </script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/controls/OrbitControls.js"></script>
+    
 </body>
 
 </html>
