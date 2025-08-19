@@ -36,8 +36,7 @@
             background: #030303;
             color: #ffffff;
             overflow-x: hidden;
-            perspective: 1000px;
-        }
+            }
 
         .achievements-section {
         padding: 20px 0;
@@ -2191,6 +2190,64 @@ padding: 40px 0; /* Reduced from 100px 0 */
             }
         }
     </style>
+<style>
+/* === Fixed CTA Dock (WhatsApp + Enquiry) === */
+.cta-dock{position:fixed;right:20px;bottom:20px;display:flex;flex-direction:column;gap:12px;z-index:2147483647;pointer-events:none}
+.cta-dock a{pointer-events:auto;width:56px;height:56px;border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:0 10px 30px rgba(0,0,0,.35);transition:transform .2s ease, box-shadow .2s ease;will-change:transform}
+.cta-dock a:hover{transform:translateY(-4px) scale(1.05);box-shadow:0 14px 34px rgba(0,0,0,.45)}
+.cta-dock .wa{background:#25D366;color:#fff}
+.cta-dock .enq{background:#f8069d;color:#fff}
+.cta-dock i{font-size:24px;color:#fff}
+@media(max-width:480px){
+  .cta-dock{right:12px;bottom:calc(12px + env(safe-area-inset-bottom));gap:10px}
+  .cta-dock a{width:56px;height:56px}
+}
+</style>
+<style>
+/* === Vertical "Enquiry Now" rail (right side) === */
+.enquiry-rail{
+  position:fixed;
+  right:8px;
+  top:45%;
+  transform:translateY(-50%);
+  height:160px;
+  width:48px;
+  border:2px solid #f8069d;
+  border-radius:26px;
+  background:rgba(0,0,0,0.6);
+  color:#f8069d;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-decoration:none;
+  box-shadow:0 8px 24px rgba(0,0,0,.45);
+  z-index:2147483647;
+  pointer-events:auto;
+  transition:background .2s ease, color .2s ease, box-shadow .2s ease, transform .2s ease;
+  -webkit-tap-highlight-color: transparent;
+}
+.enquiry-rail span{
+  writing-mode: vertical-rl;
+  transform: rotate(180deg);
+  font-weight:800;
+  font-size:14px;
+  letter-spacing:.4px;
+}
+.enquiry-rail:hover{
+  background:#f8069d;
+  color:#030303;
+  box-shadow:0 12px 30px rgba(248,6,157,.5);
+  transform:translateY(calc(-50% - 2px));
+}
+@media(max-width:768px){
+  .enquiry-rail{height:140px;width:44px;top:48%}
+  .enquiry-rail span{font-size:13px}
+}
+@media(max-width:480px){
+  .enquiry-rail{height:120px;width:40px;right:4px;top:50%}
+  .enquiry-rail span{font-size:12px}
+}
+</style>
 </head>
 
 <body>
@@ -3365,12 +3422,7 @@ padding: 40px 0; /* Reduced from 100px 0 */        color: #fff;
 <!-- Footer -->
 
 
-<!-- WhatsApp Button -->
-<a href="https://wa.me/918181814007" target="_blank" aria-label="Chat on WhatsApp" class="whatsapp-fixed" style="position: fixed !important; bottom: 20px; left: 20px; width: 60px; height: 60px; border-radius: 50%; background: #25D366; display: flex; align-items: center; justify-content: center; box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3); z-index: 100000; text-decoration: none; cursor: pointer; transition: transform 0.2s ease, box-shadow 0.2s ease; -webkit-transform: translateZ(0); transform: translateZ(0); will-change: transform;" onmouseover="this.style.transform='translateY(-4px) scale(1.05) translateZ(0)'; this.style.boxShadow='0 10px 28px rgba(0, 0, 0, 0.4)';" onmouseout="this.style.transform='translateY(0) scale(1) translateZ(0)'; this.style.boxShadow='0 6px 20px rgba(0, 0, 0, 0.3)';">
-    <i class="fab fa-whatsapp" style="font-size: 28px; color: #fff;"></i>
-</a>
-
-    <style>
+<style>
         /* Footer */
         .site-footer {
             width: 100%;
@@ -3748,6 +3800,43 @@ padding: 40px 0; /* Reduced from 100px 0 */        color: #fff;
         });
     </script>
     
+
+<!-- Fixed CTA Dock -->
+<div class="cta-dock" role="group" aria-label="Quick actions">
+  <a class="wa" href="https://wa.me/918181814007" target="_blank" aria-label="Chat on WhatsApp">
+    <i class="fab fa-whatsapp" aria-hidden="true"></i>
+  </a>
+</div>
+
+
+<script>
+document.addEventListener('DOMContentLoaded', function(){
+  var enq = document.querySelector('.cta-dock .enq');
+  var enqRail = document.querySelector('.enquiry-rail');
+  if(enqRail){enqRail.addEventListener('click', function(e){e.preventDefault();var target=document.querySelector('#contact');if(target&&target.scrollIntoView){target.scrollIntoView({behavior:'smooth',block:'start'});}else{location.hash='#contact';}});}
+  if(enq){
+    enq.addEventListener('click', function(e){
+      // only smooth scroll for same-page anchor
+      var href = enq.getAttribute('href') || '';
+      if(href.startsWith('#')){
+        e.preventDefault();
+        var target = document.querySelector(href);
+        if(target && target.scrollIntoView){
+          target.scrollIntoView({behavior:'smooth', block:'start'});
+        } else {
+          // fallback
+          window.location.hash = href;
+        }
+      }
+    });
+  }
+});
+</script>
+
+
+<!-- Vertical Enquiry rail -->
+<a href="#contact" class="enquiry-rail" aria-label="Enquiry Now"><span>Enquiry Now</span></a>
+
 </body>
 
 </html>
