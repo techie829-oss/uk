@@ -24,7 +24,16 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
     <style>
-        
+        @media (max-width: 768px) {
+  .career-card h3 {
+    font-size: 20px !important;  /* bigger heading text */
+  }
+  .career-card p {
+    font-size: 16px !important;  /* bigger paragraph text */
+    line-height: 1.6;           /* improve readability */
+  }
+}
+
         * {
             margin: 0;
             padding: 0;
@@ -2189,6 +2198,18 @@ padding: 40px 0; /* Reduced from 100px 0 */
                 font-size: 9px;
             }
         }
+        /* ✅ For mobile view */
+@media (max-width: 768px) {
+  .btn-box a {
+    padding: 10px 12px !important;   /* smaller height */
+    font-size: 14px !important;      /* smaller text */
+    border-radius: 40px !important;  /* slightly less round */
+  }
+  .btn-box {
+    gap: 10px !important;            /* reduce spacing */
+  }
+}
+
     </style>
 <style>
 /* === Fixed CTA Dock (WhatsApp + Enquiry) === */
@@ -2363,7 +2384,7 @@ padding: 40px 0; /* Reduced from 100px 0 */
         </h1>
         
         <!-- Buttons -->
-        <div class="btn-box" style="display:flex; gap:15px; margin-top:30px; flex-wrap:wrap;">
+        <div class="btn-box" style="display:flex; gap:15px; margin-top:30px; margin-right:15px; flex-wrap:wrap;">
             <a href="tel:+918181814007" class="btn-call" style="flex:1; text-align:center; padding:14px 20px; border:2px solid #f8069d; border-radius:50px; font-size:16px; font-weight:600; color:#f8069d; text-decoration:none; display:flex; align-items:center; justify-content:center; gap:8px; transition:0.3s;">
                 📞 CALL NOW
             </a>
@@ -2417,6 +2438,15 @@ padding: 40px 0; /* Reduced from 100px 0 */
 button:hover {
     box-shadow:0 0 20px rgba(248,6,157,0.6);
     transform:translateY(-2px);
+}
+@media (max-width: 768px) {
+  .why-choose h3 {
+    font-size: 19px !important;   /* bigger heading */
+  }
+  .why-choose p {
+    font-size: 15px !important;   /* bigger paragraph */
+    line-height: 1.6;            /* better readability */
+  }
 }
 
 /* Animate dotted circle */
@@ -3840,4 +3870,5 @@ document.addEventListener('DOMContentLoaded', function(){
 </body>
 
 </html>
+
 
