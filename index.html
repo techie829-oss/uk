@@ -2395,16 +2395,19 @@ padding: 40px 0; /* Reduced from 100px 0 */
     </div>
 
     <!-- Center Image -->
-    <div class="center-image" style="flex:1; display:flex; justify-content:center; align-items:center; position:relative; max-width:30%; margin:20px 0;">
-        <div class="image-wrap" style="position:relative; width:300px; height:300px; border-radius:50%; overflow:hidden; border:6px solid #fff; box-shadow:0 0 25px rgba(248,6,157,0.4);">
-            <img src="M7_UK.jpg" alt="Model" style="width:100%; height:100%; object-fit:cover; border-radius:50%;">
-            
-            <!-- Pink Design Elements -->
-            <div style="position:absolute; top:-20px; right:-30px; width:100px; height:60px; background:#f8069d; border-radius:50px; z-index:-1; filter:blur(2px);"></div>
-            <div style="position:absolute; bottom:-20px; left:-30px; width:80px; height:80px; background:#f8069d; border-radius:50%; z-index:-1; filter:blur(2px);"></div>
-            <div class="dotted-circle" style="position:absolute; top:-15px; left:-15px; border:3px dotted #fff; width:100%; height:100%; border-radius:50%;"></div>
-        </div>
+  <div class="center-image" style="flex:1; display:flex; justify-content:center; align-items:center; position:relative; max-width:40%; margin:20px 0;">
+    <div class="image-wrap" style="position:relative; width:300px; height:350px; border-radius:20px; overflow:hidden; border:6px solid #fff; box-shadow:0 0 25px rgba(248,6,157,0.4);">
+        <img src="center.jpeg" alt="Model" style="width:100%; height:100%; object-fit:cover; border-radius:20px;">
+        
+        <!-- Pink Design Elements -->
+        <div style="position:absolute; top:-20px; right:-30px; width:120px; height:60px; background:#f8069d; border-radius:30px; z-index:-1; filter:blur(2px);"></div>
+        <div style="position:absolute; bottom:-20px; left:-30px; width:100px; height:100px; background:#f8069d; border-radius:20px; z-index:-1; filter:blur(2px);"></div>
+        
+        <!-- Rectangular dotted border -->
+        <div class="dotted-rect" style="position:absolute; top:-10px; left:-10px; right:-10px; bottom:-10px; border:3px dotted #fff; border-radius:20px;"></div>
     </div>
+</div>
+
 
     <!-- Right Form -->
     <div class="right-form" style="flex:1; padding:20px; max-width:35%;">
@@ -2597,8 +2600,8 @@ setInterval(() => {
             </style>
 
            <div class="course-image">
-                <img src="about2.jpg" alt="Makeup Model 1">
-                <img src="about1.avif" alt="Makeup Model 2">
+                <img src="course3.jpeg" alt="Makeup Model 1">
+                <img src="course1.jpeg" alt="Makeup Model 2">
                
             </div>
 
@@ -2978,7 +2981,7 @@ padding: 40px 0; /* Reduced from 100px 0 */        color: #fff;
     </style>
 
 
-   <section class="section gradient-bg section-bg-1a1a1a"  
+  <section class="section gradient-bg section-bg-1a1a1a"  
     style="
         background-image: url('banner2.jpg');
         background-size: cover; 
@@ -2996,55 +2999,79 @@ padding: 40px 0; /* Reduced from 100px 0 */        color: #fff;
                 From Classroom to Global Career — expert training &amp; industry certification.
             </p>
 
-            <div class="card">
+            <div class="card" style="background: transparent; border: none; box-shadow: none;">
                 <!-- Swiper -->
-                <div class="swiper mySwiper">
-                    <div class="swiper-wrapper">
+                <div class="swiper mySwiper" style="padding:20px 0;">
+                    <div class="swiper-wrapper" style="align-items: center;">
 
                         <!-- Slides -->
-                        <div class="swiper-slide">
-                            <div class="partner-item">
-                                <div class="partner-logo"><img src="lux.jpeg" alt=""></div>
+                        <div class="swiper-slide" style="display:flex; justify-content:center; align-items:center;">
+                            <div class="partner-item" style="padding:10px;">
+                                <div class="" style="background:#fff; padding:15px; border-radius:12px; box-shadow:0 0 10px rgba(248,6,157,0.3);">
+                                    <img src="lux.jpeg" alt="Lux" 
+                                         style="width:100%; height:auto; object-fit:contain; filter:none !important; opacity:1 !important;">
+                                </div>
                             </div>
                         </div>
-                        <div class="swiper-slide">
-                            <div class="partner-item">
-                                <div class="partner-logo"><img src="skin.png" alt=""></div>
+
+                        <div class="swiper-slide" style="display:flex; justify-content:center; align-items:center;">
+                            <div class="partner-item" style="padding:10px;">
+                                <div class="" style="background:#fff; padding:15px; border-radius:12px; box-shadow:0 0 10px rgba(248,6,157,0.3);">
+                                    <img src="skin.png" alt="Skin" 
+                                         style="width:100%; height:auto; object-fit:contain; filter:none !important; opacity:1 !important;">
+                                </div>
                             </div>
                         </div>
-                        <div class="swiper-slide">
-                            <div class="partner-item">
-                                <div class="partner-logo"><img src="coal.jpeg" alt=""></div>
+
+                        <div class="swiper-slide" style="display:flex; justify-content:center; align-items:center;">
+                            <div class="partner-item" style="padding:10px;">
+                                <div class="" style="background:#fff; padding:15px; border-radius:12px; box-shadow:0 0 10px rgba(248,6,157,0.3);">
+                                    <img src="coal.jpeg" alt="Coal" 
+                                         style="width:100%; height:auto; object-fit:contain; filter:none !important; opacity:1 !important;">
+                                </div>
                             </div>
                         </div>
-                        <div class="swiper-slide">
-                            <div class="partner-item">
-                                <div class="partner-logo"><img src="hair.jpeg" alt=""></div>
+
+                        <div class="swiper-slide" style="display:flex; justify-content:center; align-items:center;">
+                            <div class="partner-item" style="padding:10px;">
+                                <div class="" style="background:#fff; padding:15px; border-radius:12px; box-shadow:0 0 10px rgba(248,6,157,0.3);">
+                                    <img src="hair.jpeg" alt="Hair Masters" 
+                                         style="width:100%; height:auto; object-fit:contain; filter:none !important; opacity:1 !important;">
+                                </div>
                             </div>
                         </div>
-                        <div class="swiper-slide">
-                            <div class="partner-item">
-                                <div class="partner-logo"><img src="bellavita.png" alt=""></div>
+
+                        <div class="swiper-slide" style="display:flex; justify-content:center; align-items:center;">
+                            <div class="partner-item" style="padding:10px;">
+                                <div class="" style="background:#fff; padding:15px; border-radius:12px; box-shadow:0 0 10px rgba(248,6,157,0.3);">
+                                    <img src="bellavita.png" alt="Bellavita" 
+                                         style="width:100%; height:auto; object-fit:contain; filter:none !important; opacity:1 !important;">
+                                </div>
                             </div>
                         </div>
-                        <div class="swiper-slide">
-                            <div class="partner-item">
-                                <div class="partner-logo"><img src="vibes.png" alt=""></div>
+
+                        <div class="swiper-slide" style="display:flex; justify-content:center; align-items:center;">
+                            <div class="partner-item" style="padding:10px;">
+                                <div class="" style="background:#fff; padding:15px; border-radius:12px; box-shadow:0 0 10px rgba(248,6,157,0.3);">
+                                    <img src="vibes.png" alt="Vibes" 
+                                         style="width:100%; height:auto; object-fit:contain; filter:none !important; opacity:1 !important;">
+                                </div>
                             </div>
                         </div>
 
                     </div>
 
                     <!-- controls -->
-                    <div class="swiper-button-next"></div>
-                    <div class="swiper-button-prev"></div>
-                    <div class="swiper-pagination"></div>
+                    <div class="swiper-button-next" style="color:#f8069d;"></div>
+                    <div class="swiper-button-prev" style="color:#f8069d;"></div>
+                    <div class="swiper-pagination" style="color:#f8069d;"></div>
                 </div>
             </div>
 
         </div>
     </div>
 </section>
+
 
 <!-- Swiper CSS -->
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
@@ -3091,7 +3118,6 @@ padding: 40px 0; /* Reduced from 100px 0 */        color: #fff;
   border: 2px solid #f8069d;
   border-radius: 12px;
   overflow: hidden;
-  background: #000;     /* fallback if image has transparency */
   display: flex;
   align-items: center;
   justify-content: center;
@@ -3130,7 +3156,6 @@ padding: 40px 0; /* Reduced from 100px 0 */        color: #fff;
   border: 2px solid #f8069d;
   border-radius: 12px;
   overflow: hidden;
-  background: #000;     /* fallback if image has transparency */
   display: flex;
   align-items: center;
   justify-content: center;
@@ -3324,28 +3349,52 @@ padding: 40px 0; /* Reduced from 100px 0 */        color: #fff;
     <div class="container">
         <div class="section-content">
             <h2 class="section-title fade-in" style="text-align:center;">
-                From Students to Makeup Stars
+               Hear From Our Students
             </h2>
 
             <div class="video-grid-row">
-                <div class="video-card fade-in fade-in-delay-1 card-3d morph-3d float-3d">
-                    <iframe src="https://www.youtube.com/embed/ehHiVjgWIrI?si=U2N7nRFidfccHF5B" 
-                        title="YouTube video player" frameborder="0" 
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-                        allowfullscreen></iframe>
-                </div>
+               
                 <div class="video-card fade-in fade-in-delay-2 card-3d morph-3d float-3d">
                     <iframe src="https://www.youtube.com/embed/5xg2F_NDccs?si=AYRm3kk6GLMRAkUP" 
                         title="YouTube video player" frameborder="0" 
                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
                         allowfullscreen></iframe>
                 </div>
-                <div class="video-card fade-in fade-in-delay-3 card-3d morph-3d float-3d">
-                    <iframe src="https://www.youtube.com/embed/Y4DsOvFYYCY?si=wo1dg_Iz-dtiNJtW" 
-                        title="YouTube video player" frameborder="0" 
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-                        allowfullscreen></iframe>
+                
+            </div>
+        </div>
+    </div>
+</section>
+<section class="section gradient-bg section-bg-1a1a1a">
+    <div class="container">
+        <div class="section-content">
+            <h2 class="section-title fade-in" style="text-align:center;">
+              Trusted by Celebrities
+            </h2>
+
+            <div class="video-grid-row">
+               
+                <div class="video-card fade-in fade-in-delay-2 card-3d morph-3d float-3d">
+                  <iframe width="560" height="315" src="https://www.youtube.com/embed/mLidJkPBRak?si=oVigShrxXHd2MTcV" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                 </div>
+                
+            </div>
+        </div>
+    </div>
+</section>
+<section class="section gradient-bg section-bg-1a1a1a">
+    <div class="container">
+        <div class="section-content">
+            <h2 class="section-title fade-in" style="text-align:center;">
+              Your Path to a Beauty Career
+            </h2>
+
+            <div class="video-grid-row">
+               
+                <div class="video-card fade-in fade-in-delay-2 card-3d morph-3d float-3d">
+                  <iframe width="560" height="315" src="https://www.youtube.com/embed/D1O0lF3WHYg?si=uKac8NoylSgUQD8I" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+                
             </div>
         </div>
     </div>
@@ -3870,6 +3919,7 @@ document.addEventListener('DOMContentLoaded', function(){
 </body>
 
 </html>
+
 
 
 
